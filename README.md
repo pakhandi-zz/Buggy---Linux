@@ -10,7 +10,17 @@ For now the application is for C++ users only.
 <b>The project is under constant development and the files in the repository might be unstable. It is therefore advised to download the latest release for usage. <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.0.zip">This is the link</a> to the latest release</b>
 <br>
 
-<h3>Requisites</h3>
+<h3>Index</h3>
+<ol>
+<li><a href="#requisites">Requisites</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#techused">Technology Used</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#understandingsourcefiles">Understanding Source Files</a></li>
+</ol>
+
+<a name="requisites"><h3>Requisites</h3></a>
 <ul>
 <li>Linux</li>
 <li>Internet Connection (it should be working on terminal)</li>
@@ -39,7 +49,7 @@ For now the application is for C++ users only.
 </li>
 </ul>
 
-<h3>Installation</h3>
+<a name="installation"><h3>Installation</h3></a>
 <ol>
 <li>Download all the files from <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.0.zip">here : V.2.0</a>.</li>
 <li>Open Sublime, and change your build system
@@ -53,28 +63,30 @@ For now the application is for C++ users only.
 	</ol>
 </li>
 <li>Change the template code in <b>template.cpp</b> as it suits you. (Let the end-comment be there to show support :) ).</li>
+<li>Make sure proper execution permission is given to <b>ini</b></li>
 </ol>
 
 
-<h3>Technology Used</h3>
+<a name="techused"><h3>Technology Used</h3></a>
 <ul>
 <li>The application is made using Python-2.7.9 and Shell scripting</li>
 <li><b>BeautifulSoup</b> module is used alongwith <b>requests</b> in Python</li>
 </ul>
 
-<h3>Testing</h3>
-The program has been tested on Ubuntu14.04, 64-bit
-
-<h3>Usage</h3>
+<a name="usage"><h3>Usage</h3></a>
 Open a terminal and move to <b>dist</b> folder and run <b>sh start.sh</b>. Then you&#39;ll need to enter the CodeForces round number (the one you see in the URL).<br>
 It'll then download everything and open Sublime and the problemset in our default browser.<br>
+Make sure proper execution permission is given to <b>ini</b>. <br>
 Code your solution and press <b>Ctrl+B</b> to compile the code.<br>
 Use <b>Ctrl+Shift+B</b> to run the program on the test files.<br>
 <center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/CF.JPG?raw=true"></center>
 <br><br>
 
+<a name="testing"><h3>Testing</h3></a>
+The program has been tested on Ubuntu14.04, 64-bit
 
-<h3>Understanding Source Files</h3>
+
+<a name="understandingsourcefiles"><h3>Understanding Source Files</h3></a>
 <ul>
 <li>
 <h6>start.sh</h6>
@@ -102,3 +114,4 @@ Refer to <a href="http://bugecode.com/post.php?pid=118" target="_blank">this pos
 <br>
 <br>
 For Hugs and Bugs drop a mail at <b>asimkprasad@gmail.com</b>
+
