@@ -75,6 +75,7 @@ For now the application is for C++ users only.
 
 <a name="usage"><h3>Usage</h3></a>
 Open a terminal and move to <b>dist</b> folder and run <b>sh start.sh</b>. Then you&#39;ll need to enter the CodeForces round number (the one you see in the URL).<br>
+Make sure Sublime Side-Bar is visible (<b>View -> Side Bar -> Show Side Bar</b>)<br>
 It'll then download everything and open Sublime and the problemset in our default browser.<br>
 Make sure proper execution permission is given to <b>ini</b>. <br>
 Code your solution and press <b>Ctrl+B</b> to compile the code.<br>
