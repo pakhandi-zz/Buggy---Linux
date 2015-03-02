@@ -6,7 +6,9 @@
 
 
 {
-    "cmd": ["g++", "-Wall", "${file_name}","-o", "${file_base_name}.exe"], 
+    //"cmd": ["g++", "-Wall", "${file_name}","-o", "${file_base_name}.exe"], 
+
+    "cmd": ["g++ '${file}' -o '${file_path}/${file_base_name}'"],
 
     "selector": "source.c++",
     "shell": true,
@@ -20,13 +22,13 @@
                     "working_dir" : "$file_path"
                 },
                 {   
-                    "cmd": [ "start", "zy.bat", "${file_base_name}.exe" ],
+                    "cmd": [ "'${file_path}'/f.sh '${file_base_name}'" ],
                     "shell": true,
                     "name": "Run",
                     "working_dir" : "$file_path"
                 },
                 {
-                    "cmd": [ "start", "zz.bat", "${file_base_name}.exe" ],
+                    "cmd": [ "gnome-terminal -e ./'${file_path}'/'${file_base_name}'" ],
                     "shell": true,
                     "name": "run_custom_test_case",
                     "working_dir" : "$file_path"
