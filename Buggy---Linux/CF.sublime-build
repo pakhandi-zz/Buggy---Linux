@@ -1,0 +1,41 @@
+
+/*{
+    "cmd": ["bash", "-c", "g++ '${file}' -o '${file_path}/${file_base_name}' && '${file_path}/${file_base_name}'"]
+    //"cmd": ["bash", "-c", "g++ '${file}' -o '${file_path}/${file_base_name}' && open Terminal.app '${file_path}/${file_base_name}'"]
+}*/
+
+
+{
+    "cmd": ["g++", "-Wall", "${file_name}","-o", "${file_base_name}.exe"], 
+
+    "selector": "source.c++",
+    "shell": true,
+    
+    "variants": 
+    		[
+                {
+                    "cmd": [ "sh ${packages}/User/CF/dist/start.sh" ],
+                    "shell": true,
+                    "name": "parse_test_cases",
+                    "working_dir" : "$file_path"
+                },
+                {   
+                    "cmd": [ "start", "zy.bat", "${file_base_name}.exe" ],
+                    "shell": true,
+                    "name": "Run",
+                    "working_dir" : "$file_path"
+                },
+                {
+                    "cmd": [ "start", "zz.bat", "${file_base_name}.exe" ],
+                    "shell": true,
+                    "name": "run_custom_test_case",
+                    "working_dir" : "$file_path"
+                },
+                {
+                    "cmd": [ "start", "C:\\CF\\dist\\submit_solution.bat" ],
+                    "shell": true,
+                    "name": "CF_submit_solution",
+                    "working_dir" : "$file_path"
+                }
+            ]
+}

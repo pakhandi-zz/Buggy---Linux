@@ -1,0 +1,56 @@
+[
+    {
+        "caption": "Buggy",
+        "mnemonic": "n",
+        "id": "buggy",
+        "children":
+        [
+            {
+                "command": "build",
+                "args": {"variant": "parse_test_cases"},
+                "caption": "Start"
+            },
+            {
+                "command": "build",
+                "caption": "Compile"
+            },
+            {
+                "command": "build",
+                "args": {"variant": "Run"},
+                "caption": "Batch Test"
+            },
+            {
+                "command": "build",
+                "args": {"variant": "run_custom_test_case"},
+                "caption": "Custom TestCase"
+            },
+            {
+                "command": "build",
+                "args": {"variant": "CF_submit_solution"},
+                "caption": "Submit Solution"
+            },
+            { "caption": "-" },
+            {
+                "command": "open_file",
+                "args": {"file": "${packages}/User/Buggy---Windows/README.md"},
+                "caption": "README"
+            },
+            {
+                "command": "open_file",
+                "args": {"file": "${packages}/User/Buggy---Windows/Default (Linux).sublime-keymap"},
+                "caption": "Key Bindings - Default"
+            },
+            {
+                "command": "open_file",
+                "args": {"file": "/home/pakhandi/github/Buggy---Linux/README.md"},
+                "caption": "Template"
+            },
+            {
+                "caption": "Package Control",
+                "mnemonic": "C",
+                "command": "show_overlay",
+                "args": {"overlay": "command_palette", "text": "Hello: "}
+            }               
+        ]
+    }
+]
