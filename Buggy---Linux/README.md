@@ -1,13 +1,13 @@
-<h1>Batch-Test for CodeForces : V.2.1</h1>
+<h1>Buggy : V.2.1</h1>
 
 A batch-testing sublime plug-in for CodeForces
 <br><br>
 This application is to assist a competitive-programmer in a CodeForces round. This application downloads all the sample test cases for a problem and runs a user&#39;s solution program on all these test cases so that no time is wasted on manual checking of the solution.
 
-For now the application is for C++ users only.<br>
+For now the application is for C++ users only.
 <br>
 <br>
-<b>The project is under constant development and the files in the repository might be unstable. It is therefore advised to download the latest release for usage. <a href="https://github.com/pakhandi/Buggy---Windows/archive/V.2.1.zip">This is the link</a> to the latest release</b>
+<b>The project is under constant development and the files in the repository might be unstable. It is therefore advised to download the latest release for usage. <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.1.zip">This is the link</a> to the latest release</b>
 <br>
 
 <h3>Index</h3>
@@ -21,16 +21,15 @@ For now the application is for C++ users only.<br>
 
 <a name="requisites"><h3>Requisites</h3></a>
 <ul>
-<li>Windows OS</li>
-<li>Internet Connection (it should be working on cmd and should be allowed for all the applications)</li>
-<li>A little space in <b>C:</b> drive</li>
-<li>Sublime Text-3 (make sure it&#39;s included in the PATH-variables)
+<li>Linux (Tested on Ubuntu-14.04)</li>
+<li>Internet Connection (it should be working on terminal)</li>
+<li>Sublime Text-3
 	<ul>
-	<li>To check Sublime Text-3 is included to PATH-variables
+	<li>To check Sublime is installed correctly
 		<ol>
-		<li>Open a <b>cmd</b> window.</li>
-		<li>Run "subl" in the cmd.</li>
-		<li>If Sublime opens up, everything is perfect</li>
+		<li>Open a <b>terminal</b> window.</li>
+		<li>Run "subl".</li>
+		<li>If Sublime opens up, everything is perfect.</li>
 		</ol>
 	</li>
 	</ul>
@@ -40,9 +39,9 @@ For now the application is for C++ users only.<br>
 	<ul>
 	<li>To check g++ is working
 		<ol>
-		<li>Open a <b>cmd</b> window.</li>
-		<li>Run "g++" in the cmd.</li>
-		<li>If it throws an error of missing file, everything is perfect</li>
+		<li>Open a <b>terminal</b> window.</li>
+		<li>Run "g++".</li>
+		<li>If it identifies the command, everything is perfect.</li>
 		</ol>
 	</li>
 	</ul>
@@ -51,28 +50,16 @@ For now the application is for C++ users only.<br>
 
 <a name="installation"><h3>Installation</h3></a>
 <ol>
-<li>Download all the files from <a href="https://github.com/pakhandi/Buggy---Windows/archive/V.2.1.zip">here : V.2.1</a>.</li>
-<li>Shift the <b>CF</b> folder to <b>"C:\"</b>. This is very important for the application to work. The CF folder should be directly in <b>C:</b> drive</li>
-<li>Shift the <b>Buggy---Windows</b> folder to <b>C:\Users\DELL\AppData\Roaming\Sublime Text 3\Packages</b></li>
-<li>Open Sublime-Text-3 (referred as Sublime here after), and change your build system
-	<ol>
-	<li>GoTo <b>"Tools -> Build System"</b> and select <b>CF</b> </li>
-	<li>Your Sublime is now configured</li>
-	</ol>
-</li>
+<li>Download all the files from <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.1.zip">here : V.2.1</a>.</li>
+<li>Shift the <b>Buggy---Linux</b> and <b>CF</b> folder to <b>/home/<i>username</i>/.config/sublime-text-3/Packages/User/</b></li>
+<li>substitute <b><i>username</i></b> appropriately.</li>
+<li>Make sure proper execution permission is given to <b>ini</b> and shell scripts.</li>
+<li>Open sublime. GoTo <b>"Tools -> Build System"</b> and select <b>CF</b></li>
+<li>If you see <b>Buggy</b> menu in the menu-bar, installation is complete</li>
+<li>Change the template code in <b>CF/dist/template.cpp</b> as it suits you. (Let the end-comment be there to show support <b>:)</b> ).</li>
+
 </ol>
 
-<a name="usage"><h3>Usage</h3></a>
-<ul>
-<li>After the installation, you should see a new menu in the menu bar, <b>Buggy</b>.</li>
-<li>Click on the <b>Buggy</b> menu and you&#39;ll be able to see all the options there.</li>
-<li>Make sure Sublime Side-Bar is visible (<b>View -> Side Bar -> Show Side Bar</b>).</li>
-<li>Compile the code before running it on test-cases.</li>
-<li>For parsing the test-cases, provide the round-number you see in the url of the contest.</li>
-<li>Copy the code before going to submit the code.</li>
-<li>If you want you can change the key-bindings too.</li>
-</ul>
-<center><img src="https://github.com/pakhandi/BatchTest_CodeForces/blob/master/src_windows/CF.JPG?raw=true"></center>
 
 <a name="techused"><h3>Technology Used</h3></a>
 <ul>
@@ -80,11 +67,25 @@ For now the application is for C++ users only.<br>
 <li><b>BeautifulSoup</b> module is used alongwith <b>requests</b> in Python</li>
 </ul>
 
+<a name="usage"><h3>Usage</h3></a>
+<ul>
+<li>After the installation, you should see a new menu in the menu bar, <b>Buggy</b>.</li>
+<li>Click on the <b>Buggy</b> menu and you&#39;ll be able to see all the options there.</li>
+<li>Make sure Sublime Side-Bar is visible (<b>View -> Side Bar -> Show Side Bar</b>).</li>
+<li>Compile the code before running it on test-cas2.es (<b>Ctrl+B</b> or <b>Buggy -> Compile</b>)</li>
+<li>For parsing the test-cases, provide the round-number you see in the url of the contest.</li>
+<li>Copy the code before going to submit the code.</li>
+<li>If you want you can change the key-bindings too.</li>
+</ul>
+<center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/CF.JPG?raw=true"></center>
+<br><br>
+
 <a name="testing"><h3>Testing</h3></a>
-The program has been tested on Windows-8.1, 64-bit
+The program has been tested on Ubuntu14.04, 64-bit
 
 <br>
 Refer to <a href="http://bugecode.com/post.php?pid=118" target="_blank">this post</a> for more detailed explanation of the working of the application.
 <br>
 <br>
 For Hugs and Bugs drop a mail at <b>asimkprasad@gmail.com</b>
+

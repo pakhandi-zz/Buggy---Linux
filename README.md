@@ -1,4 +1,4 @@
-<h1>Buggy : V.2.0</h1>
+<h1>Buggy : V.2.1</h1>
 
 A batch-testing sublime plug-in for CodeForces
 <br><br>
@@ -7,7 +7,7 @@ This application is to assist a competitive-programmer in a CodeForces round. Th
 For now the application is for C++ users only.
 <br>
 <br>
-<b>The project is under constant development and the files in the repository might be unstable. It is therefore advised to download the latest release for usage. <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.0.zip">This is the link</a> to the latest release</b>
+<b>The project is under constant development and the files in the repository might be unstable. It is therefore advised to download the latest release for usage. <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.1.zip">This is the link</a> to the latest release</b>
 <br>
 
 <h3>Index</h3>
@@ -17,14 +17,13 @@ For now the application is for C++ users only.
 <li><a href="#techused">Technology Used</a></li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#testing">Testing</a></li>
-<li><a href="#understandingsourcefiles">Understanding Source Files</a></li>
 </ol>
 
 <a name="requisites"><h3>Requisites</h3></a>
 <ul>
-<li>Linux</li>
+<li>Linux (Tested on Ubuntu-14.04)</li>
 <li>Internet Connection (it should be working on terminal)</li>
-<li>Sublime Text-3 or Sublime Text-2
+<li>Sublime Text-3
 	<ul>
 	<li>To check Sublime is installed correctly
 		<ol>
@@ -51,19 +50,14 @@ For now the application is for C++ users only.
 
 <a name="installation"><h3>Installation</h3></a>
 <ol>
-<li>Download all the files from <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.0.zip">here : V.2.0</a>.</li>
-<li>Open Sublime, and change your build system
-	<ol>
-	<li>GoTo <b>"Tools -> Build System -> New Build System".</b></li>
-	<li>A file with some pre-written code will open-up, delete all the contents of this file.</li>
-	<li>In the <b>src_linux</b> folder you&#39;ll find a file <b>CF.sublime-build</b>. Copy the contents of this file in the file that had opened up in the previous step.</li>
-	<li>Save this file in the default location with name <b>CF</b>.</li>
-	<li>GoTo <b>"Tools -> Build System"</b> and select <b>CF</b> </li>
-	<li>Your Sublime is now configured</li>
-	</ol>
-</li>
-<li>Change the template code in <b>template.cpp</b> as it suits you. (Let the end-comment be there to show support :) ).</li>
-<li>Make sure proper execution permission is given to <b>ini</b></li>
+<li>Download all the files from <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.1.zip">here : V.2.1</a>.</li>
+<li>Shift the <b>Buggy---Linux</b> and <b>CF</b> folder to <b>/home/<i>username</i>/.config/sublime-text-3/Packages/User/</b></li>
+<li>substitute <b><i>username</i></b> appropriately.</li>
+<li>Make sure proper execution permission is given to <b>ini</b> and shell scripts.</li>
+<li>Open sublime. GoTo <b>"Tools -> Build System"</b> and select <b>CF</b></li>
+<li>If you see <b>Buggy</b> menu in the menu-bar, installation is complete</li>
+<li>Change the template code in <b>CF/dist/template.cpp</b> as it suits you. (Let the end-comment be there to show support <b>:)</b> ).</li>
+
 </ol>
 
 
@@ -74,42 +68,21 @@ For now the application is for C++ users only.
 </ul>
 
 <a name="usage"><h3>Usage</h3></a>
-Open a terminal and move to <b>dist</b> folder and run <b>sh start.sh</b>. Then you&#39;ll need to enter the CodeForces round number (the one you see in the URL).<br>
-Make sure Sublime Side-Bar is visible (<b>View -> Side Bar -> Show Side Bar</b>)<br>
-It'll then download everything and open Sublime and the problemset in our default browser.<br>
-Make sure proper execution permission is given to <b>ini</b>. <br>
-Code your solution and press <b>Ctrl+B</b> to compile the code.<br>
-Use <b>Ctrl+Shift+B</b> to run the program on the test files.<br>
+<ul>
+<li>After the installation, you should see a new menu in the menu bar, <b>Buggy</b>.</li>
+<li>Click on the <b>Buggy</b> menu and you&#39;ll be able to see all the options there.</li>
+<li>Make sure Sublime Side-Bar is visible (<b>View -> Side Bar -> Show Side Bar</b>).</li>
+<li>Compile the code before running it on test-cas2.es (<b>Ctrl+B</b> or <b>Buggy -> Compile</b>)</li>
+<li>For parsing the test-cases, provide the round-number you see in the url of the contest.</li>
+<li>Copy the code before going to submit the code.</li>
+<li>If you want you can change the key-bindings too.</li>
+</ul>
 <center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/CF.JPG?raw=true"></center>
 <br><br>
 
 <a name="testing"><h3>Testing</h3></a>
 The program has been tested on Ubuntu14.04, 64-bit
 
-
-<a name="understandingsourcefiles"><h3>Understanding Source Files</h3></a>
-<ul>
-<li>
-<h6>start.sh</h6>
-It is the shell file which drives the entire application. It first takes the round number as the input and passes it to the <b>ini</b>. After <b>ini</b> has completed it&#39;s task, <b>start.sh</b> opens the contest-folder in Sublime, and opens the template for the first problem, after that it opens the Problems-Webpage in the default browser and ends.
-</li>
-<li>
-<h6>ini</h6>
-<b>ini</b> is the executable format of the python script <b>ini.py</b>. The python script <b>ini.py</b> uses <i>requests</i> and <i>BeautifulSoup</i> to fetch the data from the CodeForces site. The driver shell file, <b>start.sh</b>, passes the round number to the python script so that the script fetches the problems of the required round. <b>ini</b> also makes the folders, according to the question numbers, and puts the test-cases as well as the template code into them. Another shell file, <b>f.sh</b> is also transferred to all the folders.
-</li>
-<li>
-<h6>f.sh</h6>
-This shell file holds the responsibility to run the .exe file generated by the program of the user on all the test-files and show the output generated by the user's program and the correct output.
-</li>
-<li>
-<h6>template.cpp</h6>
-This file is to allow user to set a template code for his solutions. This code will be transferred to each problem-folder as <b>prog.cpp</b>
-</li>
-<li>
-<h6>CF.sublime-build</h6>
-This is the sublime-build file. This is a custom build which compiles cpp code and makes an exe file on <b>Ctrl+B</b>, and runs the <b>f.sh</b> file on <b>Ctrl+Shift+B</b>.
-</li>
-</ul>
 <br>
 Refer to <a href="http://bugecode.com/post.php?pid=118" target="_blank">this post</a> for more detailed explanation of the working of the application.
 <br>
