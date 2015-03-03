@@ -2,6 +2,7 @@ echo "Enter the round number : "
 read round
 echo $round > temp.txt
 ./ini < temp.txt
+chmod -R 777 $round
 subl ./$round
 subl $round/A/prog.cpp
 alias xdg-open="xdg-open 2>/dev/null"
