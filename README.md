@@ -17,6 +17,7 @@ For now the application is for C++ users only.
 <li><a href="#techused">Technology Used</a></li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#testing">Testing</a></li>
+<li><a href="http://bugecode.com/post.php?pid=121" target="_blank">FAQ</a></li>
 </ol>
 
 <a name="requisites"><h3>Requisites</h3></a>
