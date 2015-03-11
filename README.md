@@ -66,6 +66,7 @@ For now the application is for C++ users only.
 <ul>
 <li>The application is made using Python-2.7.9 and Shell scripting</li>
 <li><b>BeautifulSoup</b> module is used alongwith <b>requests</b> in Python</li>
+<li>Executables are made using cx_freeze</li>
 </ul>
 
 <a name="usage"><h3>Usage</h3></a>
