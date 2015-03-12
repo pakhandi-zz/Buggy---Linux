@@ -72,7 +72,11 @@ For now the application is for C++ users only.
 <a name="usage"><h3>Usage</h3></a>
 <ul>
 <li>After the installation, you should see a new menu in the menu bar, <b>Buggy</b>.</li>
-<li>Click on the <b>Buggy</b> menu and you&#39;ll be able to see all the options there.</li>
+<li>Click on the <b>Buggy</b> menu and you&#39;ll be able to see all the options there.
+	<ul>
+	<li>If you are not able to see all the options, <b>"Tools -> Build System"</b> and select <b>CF</b>.</li>
+	</ul>
+</li>
 <li>Make sure Sublime Side-Bar is visible (<b>View -> Side Bar -> Show Side Bar</b>).</li>
 <li>Compile the code before running it on test-cas2.es (<b>Ctrl+B</b> or <b>Buggy -> Compile</b>)</li>
 <li>For parsing the test-cases, provide the round-number you see in the url of the contest.</li>
