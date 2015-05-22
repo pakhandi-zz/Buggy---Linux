@@ -7,6 +7,27 @@ import shutil
 CF = raw_input()
 
 url = "http://codeforces.com/contest/"+CF+"/problems"
+
+lag=0
+try:
+    data = requests.get(url)
+    flag = 1
+except Exception, e:
+    print "Direct Connection Failed, trying Proxy"
+    fo = open("proxy.txt", "r+")
+    http_proxy = fo.read(100)
+    fo.close()
+
+    proxyDict = { 
+                   "http"  : "http://"+http_proxy
+                }
+
+    data = requests.get(url, proxies=proxyDict)
+    flag=1
+
+if flag==0:
+    print "Error in Connection to Internet"
+
 data = requests.get(url)
 
 soup = BeautifulSoup(data.text)
