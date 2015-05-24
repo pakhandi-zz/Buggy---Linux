@@ -41,21 +41,6 @@ for x in soup.findAll('li', 'current'):
 if present == 0:
     exit()
 
-'''
-for div in soup.findAll('div', 'problemindexholder'):
-    count = 0
-    for item in div.findAll('div'):
-        count+=1
-        if count == 13:
-            print "\n\n\nPROBLEM STATEMENT : "
-            print item.text
-        if count == 14:
-            print "\n\n\nINPUT : "
-            print item.text
-        if count == 16:
-            print "\n\n\nOUTPUT : "
-            print item.text
-'''
         
 counter = 0
 for div in soup.findAll('div', 'problemindexholder'):
@@ -69,7 +54,7 @@ for div in soup.findAll('div', 'problemindexholder'):
     shutil.copyfile("zy.sh",CF+"/"+chr(ord('A')+counter)+"/zy.sh")
     shutil.copyfile("zx.sh",CF+"/"+chr(ord('A')+counter)+"/zx.sh")
     shutil.copyfile("temp.txt",CF+"/"+chr(ord('A')+counter)+"/round.txt")
-    shutil.copyfile("template.cpp", CF+"/"+chr(ord('A')+counter)+"/prog.cpp" )
+    shutil.copyfile("template.cpp", CF+"/"+chr(ord('A')+counter)+"/aprog.cpp" )
     
     detach_dir = CF+"/"+chr(ord('A')+counter)+"/"
     att_path = os.path.join(detach_dir, chr(ord('A')+counter)+".cpp")
