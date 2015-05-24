@@ -9,13 +9,16 @@ For now the application is for C++ users only.
 <br>
 <b>The project is under constant development and the files in the repository might be unstable. It is therefore advised to download the latest release for usage. <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.1.zip">This is the link</a> to the latest release</b>
 <br>
+<b>NOTE : </b>Please try the Plug-in once before using it in actual contest to avoid any last minute confusions.<br>
+<b>Make Sure you have read the <a href="#installation">Installation</a> and <a href="#usage">Usage</a> very very carefully.</b>
+<br>
 
 <h3>Index</h3>
 <ol>
 <li><a href="#requisites">Requisites</a></li>
 <li><a href="#installation">Installation</a></li>
-<li><a href="#techused">Technology Used</a></li>
 <li><a href="#usage">Usage</a></li>
+<li><a href="#techused">Technology Used</a></li>
 <li><a href="#testing">Testing</a></li>
 <li><a href="http://bugecode.com/post.php?pid=121" target="_blank">FAQ</a></li>
 </ol>
@@ -52,8 +55,7 @@ For now the application is for C++ users only.
 <a name="installation"><h3>Installation</h3></a>
 <ol>
 <li>Download all the files from <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.1.zip">here : V.2.1</a>.</li>
-<li>Shift the <b>Buggy---Linux</b> and <b>CF</b> folder to <b>/home/<i>username</i>/.config/sublime-text-3/Packages/User/</b></li>
-<li>substitute <b><i>username</i></b> appropriately.</li>
+<li>Shift the <b>Buggy---Linux</b> and <b>CF</b> folder to <b>~/.config/sublime-text-3/Packages/User/</b></li>
 <li>Make sure proper execution permission is given to <b>ini</b> and shell scripts.</li>
 <li>Open sublime. GoTo <b>"Tools -> Build System"</b> and select <b>CF</b></li>
 <li>If you see <b>Buggy</b> menu in the menu-bar, installation is complete</li>
@@ -62,12 +64,6 @@ For now the application is for C++ users only.
 </ol>
 
 
-<a name="techused"><h3>Technology Used</h3></a>
-<ul>
-<li>The application is made using Python-2.7.9 and Shell scripting</li>
-<li><b>BeautifulSoup</b> module is used alongwith <b>requests</b> in Python</li>
-<li>Executables are made using cx_freeze</li>
-</ul>
 
 <a name="usage"><h3>Usage</h3></a>
 <ul>
@@ -78,13 +74,29 @@ For now the application is for C++ users only.
 	</ul>
 </li>
 <li>Make sure Sublime Side-Bar is visible (<b>View -> Side Bar -> Show Side Bar</b>).</li>
-<li>Compile the code before running it on test-cas2.es (<b>Ctrl+B</b> or <b>Buggy -> Compile</b>)</li>
+<li>To start parsing the test-cases, <b>(Buggy -> Start)</b>.</li>
 <li>For parsing the test-cases, provide the round-number you see in the url of the contest.</li>
+<li>Compile the code before running it on test-cas2.es (<b>Ctrl+B</b> or <b>Buggy -> Compile</b>)</li>
 <li>Copy the code before going to submit the code.</li>
 <li>If you want you can change the key-bindings too.</li>
+<li>If you are working behind proxy
+	<ul>
+	<li>Open dist/proxy.txt</li>
+	<li>Delete all the contents of the file and add your proxy with the following format </li>
+	<li>username:password@proxy:port</li>
+	</ul>
+</li>
 </ul>
 <center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/CF.JPG?raw=true"></center>
 <br><br>
+
+
+<a name="techused"><h3>Technology Used</h3></a>
+<ul>
+<li>The application is made using Python-2.7.9 and Shell scripting</li>
+<li><b>BeautifulSoup</b> module is used alongwith <b>requests</b> in Python</li>
+<li>Executables are made using cx_freeze</li>
+</ul>
 
 <a name="testing"><h3>Testing</h3></a>
 The program has been tested on Ubuntu14.04, 64-bit
