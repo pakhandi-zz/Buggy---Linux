@@ -88,7 +88,7 @@ For now the application is for C++ users only.
 </li>
 <li>If you want the problem-set to open in your default browser, uncomment the last two lines of <b>CF/dist/start.sh</b> </li>
 </ul>
-<center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_windows/menu.jpg?raw=true"></center>
+<center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/menu.jpg?raw=true"></center>
 <br>
 <center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/CF.JPG?raw=true"></center>
 <br><br>
