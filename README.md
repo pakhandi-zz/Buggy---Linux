@@ -50,6 +50,7 @@ For now the application is for C++ users only.
 	</li>
 	</ul>
 </li>
+<li><b>NOTE : xdg-open command is used. Make suitable replacements/installations (in zx.sh and start.sh).</b></li>
 </ul>
 
 <a name="installation"><h3>Installation</h3></a>
