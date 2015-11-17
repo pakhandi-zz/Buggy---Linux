@@ -53,7 +53,7 @@ For now the application is for C++ users only.
 
 <a name="installation"><h3>Installation</h3></a>
 <ol>
-<li>Download all the files from <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.3.zip">here : V.2.2</a>.</li>
+<li>Download all the files from <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.3.zip">here : V.2.3</a>.</li>
 <li>Shift the <b>Buggy---Linux</b> and <b>CF</b> folder to <b>~/.config/sublime-text-3/Packages/User/</b></li>
 <li>Make sure proper execution permission is given to <b>ini</b> and shell scripts.</li>
 <li>Open sublime. GoTo <b>"Tools -> Build System"</b> and select <b>CF</b></li>
