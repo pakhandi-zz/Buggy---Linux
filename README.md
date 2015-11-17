@@ -1,4 +1,4 @@
-<h1>Buggy : V.2.2</h1>
+<h1>Buggy : V.2.3</h1>
 
 A batch-testing sublime plug-in for CodeForces
 <br><br>
@@ -6,8 +6,6 @@ This application is to assist a competitive-programmer in a CodeForces round. Th
 
 For now the application is for C++ users only.
 <br>
-<br>
-<b>The project is under constant development and the files in the repository might be unstable. It is therefore advised to download the latest release for usage. <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.2.zip">This is the link</a> to the latest release</b>
 <br>
 <b>NOTE : </b>Please try the Plug-in once before using it in actual contest to avoid any last minute confusions.<br>
 <b>Make Sure you have read the <a href="#installation">Installation</a> and <a href="#usage">Usage</a> very very carefully.</b>
@@ -55,7 +53,7 @@ For now the application is for C++ users only.
 
 <a name="installation"><h3>Installation</h3></a>
 <ol>
-<li>Download all the files from <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.2.zip">here : V.2.2</a>.</li>
+<li>Download all the files from <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.2.3.zip">here : V.2.2</a>.</li>
 <li>Shift the <b>Buggy---Linux</b> and <b>CF</b> folder to <b>~/.config/sublime-text-3/Packages/User/</b></li>
 <li>Make sure proper execution permission is given to <b>ini</b> and shell scripts.</li>
 <li>Open sublime. GoTo <b>"Tools -> Build System"</b> and select <b>CF</b></li>
