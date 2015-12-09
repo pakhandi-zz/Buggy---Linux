@@ -31,6 +31,12 @@
                     "shell": true,
                     "name": "CF_submit_solution",
                     "working_dir" : "$file_path"
+                },
+                {
+                    "cmd": ["g++ '${file}' -o '${file_path}/${file_base_name}'"],
+                    "shell": true,
+                    "name": "basic",
+                    "working_dir": "$file_path"
                 }
             ]
 }

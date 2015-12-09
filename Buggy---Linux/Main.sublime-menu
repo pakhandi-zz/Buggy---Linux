@@ -12,6 +12,7 @@
             },
             {
                 "command": "build",
+                "args": {"variant": "basic"},
                 "caption": "Compile"
             },
             {
