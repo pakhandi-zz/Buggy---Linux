@@ -1,5 +1,7 @@
 <h1>Buggy : V.3.0</h1>
 
+<b>Download the stable version from <a href="pakhandi.github.io/Buggy---Linux/">here</a></b>
+
 A batch-testing sublime plug-in for CodeForces
 <br><br>
 This application is to assist a competitive-programmer in a CodeForces round. This application downloads all the sample test cases for a problem and runs a user&#39;s solution program on all these test cases so that no time is wasted on manual checking of the solution.
