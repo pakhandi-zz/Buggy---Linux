@@ -1,0 +1,6 @@
+chmod -R 777 src_linux
+cp -r CF ~/.config/sublime-text-3/Packages/User/
+cp -r Buggy---Linux ~/.config/sublime-text-3/Packages/User/
+chmod -R 777 ~/.config/sublime-text-3/Packages/User/CF
+chmod -R 777 ~/.config/sublime-text-3/Packages/User/Buggy---Linux
+cp src_linux/Buggy_* /usr/bin/

@@ -12,7 +12,7 @@
             },
             {
                 "command": "build",
-                "args": {"variant": "basic"},
+                "args": {"variant": "Compile"},
                 "caption": "Compile"
             },
             {
@@ -23,11 +23,11 @@
             {
                 "command": "build",
                 "args": {"variant": "run_custom_test_case"},
-                "caption": "Custom TestCase"
+                "caption": "Custom Test"
             },
             {
                 "command": "build",
-                "args": {"variant": "CF_submit_solution"},
+                "args": {"variant": "Submit"},
                 "caption": "Submit Solution"
             },
             { "caption": "-" },
@@ -45,7 +45,12 @@
                 "command": "open_file",
                 "args": {"file": "${packages}/User/CF/dist/template.cpp"},
                 "caption": "Template"
-            }              
+            } ,
+            {
+                "command": "open_file",
+                "args": {"file": "${packages}/User/CF/dist/proxy.txt"},
+                "caption": "Proxy"
+            },             
         ]
     }
 ]

@@ -1,7 +1,7 @@
 [
-	{ "keys": ["ctrl+shift+i"], "command": "build", "args": {"variant": "parse_test_cases"} },
-	{ "keys": ["ctrl+b"], "command": "build", "args": {"variant": "basic"} },
-	{ "keys": ["ctrl+shift+b"], "command": "build", "args": {"variant": "Run"} },
-	{ "keys": ["ctrl+alt+b"], "command": "build", "args": {"variant": "run_custom_test_case"} },
-	{ "keys": ["ctrl+alt+s"], "command": "build", "args": {"variant": "CF_submit_solution"} }
+	{ "keys": ["ctrl+shift+I"], "command": "build", "args": {"variant": "parse_test_cases"} },
+	{ "keys": ["ctrl+B"], "command": "build", "args": {"variant": "Compile"} },
+	{ "keys": ["ctrl+shift+B"], "command": "build", "args": {"variant": "Run"} },
+	{ "keys": ["ctrl+alt+B"], "command": "build", "args": {"variant": "run_custom_test_case"} },
+	{ "keys": ["ctrl+alt+S"], "command": "build", "args": {"variant": "Submit"} }
 ]

@@ -5,7 +5,7 @@
     "shell": true,
     
     "variants": 
-    		[
+            [
                 {
                     "cmd": [ "sh ${packages}/User/CF/dist/ini.sh" ],
                     "shell": true,
@@ -13,27 +13,27 @@
                     "working_dir" : "$file_path"
                 },
                 {   
-                    "cmd": [ "'${file_path}'/zz.sh '${file_base_name}'" ],
+                    "cmd": [ "Buggy_BatchTest '${file_base_name}'" ],
                     "shell": true,
                     "name": "Run",
                     "working_dir" : "$file_path"
                 },
                 {
-                    "cmd": [ "'${file_path}'/zy.sh '${file_base_name}'" ],
+                    "cmd": [ "Buggy_CustomTest '${file_base_name}'" ],
                     "shell": true,
                     "name": "run_custom_test_case",
                     "working_dir" : "$file_path"
                 },
                 {
-                    "cmd": [ "'${file_path}'/zx.sh<round.txt" ],
+                    "cmd": [ "Buggy_Submit<round.txt" ],
                     "shell": true,
-                    "name": "CF_submit_solution",
+                    "name": "Submit",
                     "working_dir" : "$file_path"
                 },
                 {
                     "cmd": ["g++ '${file}' -o '${file_path}/${file_base_name}'"],
                     "shell": true,
-                    "name": "basic",
+                    "name": "Compile",
                     "working_dir": "$file_path"
                 }
             ]

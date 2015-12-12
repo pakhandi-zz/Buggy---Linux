@@ -40,7 +40,6 @@ for x in soup.findAll('li', 'current'):
 
 if present == 0:
     exit()
-
         
 counter = 0
 for div in soup.findAll('div', 'problemindexholder'):
@@ -50,9 +49,6 @@ for div in soup.findAll('div', 'problemindexholder'):
     else:
         os.makedirs(CF+"/"+chr(ord('A')+counter))
 
-    shutil.copyfile("zz.sh",CF+"/"+chr(ord('A')+counter)+"/zz.sh")
-    shutil.copyfile("zy.sh",CF+"/"+chr(ord('A')+counter)+"/zy.sh")
-    shutil.copyfile("zx.sh",CF+"/"+chr(ord('A')+counter)+"/zx.sh")
     shutil.copyfile("temp.txt",CF+"/"+chr(ord('A')+counter)+"/round.txt")
     shutil.copyfile("template.cpp", CF+"/"+chr(ord('A')+counter)+"/aprog.cpp" )
     
