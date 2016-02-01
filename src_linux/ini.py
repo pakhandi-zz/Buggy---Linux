@@ -1,36 +1,35 @@
-import requests
 import os
 from bs4 import BeautifulSoup
 import shutil
+import urllib2
 
 #print "Enter the round number : "
 CF = raw_input()
 
 url = "http://codeforces.com/contest/"+CF+"/problems"
 
-lag=0
 try:
-    data = requests.get(url)
-    flag = 1
+    print "Trying direct connection"
+    response = urllib2.urlopen(url)
+    data = response.read()
+    soup = BeautifulSoup(data)
 except Exception, e:
     print "Direct Connection Failed, trying Proxy"
-    fo = open("proxy.txt", "r+")
-    http_proxy = fo.read(100)
-    fo.close()
+    proxy_file = open("proxy.txt", 'r')
+    proxy_config = proxy_file.readline();
 
-    proxyDict = { 
-                   "http"  : "http://"+http_proxy
-                }
+    if len(proxy_config) != 0:
+        proxy = urllib2.ProxyHandler({'http': proxy_config})
+        opener = urllib2.build_opener(proxy)
+        urllib2.install_opener(opener)
 
-    data = requests.get(url, proxies=proxyDict)
-    flag=1
-
-if flag==0:
+    response = urllib2.urlopen(url)
+    data = response.read()
+    soup = BeautifulSoup(data)
+finally:
     print "Error in Connection to Internet"
 
-data = requests.get(url)
-
-soup = BeautifulSoup(data.text)
+#soup = BeautifulSoup(data.text)
 
 present=1
 
