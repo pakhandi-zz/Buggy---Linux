@@ -96,7 +96,7 @@ For now the application is for C++ users only.
 <a name="techused"><h3>Technology Used</h3></a>
 <ul>
 <li>The application is made using Python-2.7.9 and Shell scripting</li>
-<li><b>BeautifulSoup</b> module is used alongwith <b>requests</b> in Python</li>
+<li><b>BeautifulSoup</b> module is used in Python</li>
 <li>Executables are made using cx_freeze</li>
 </ul>
 
