@@ -49,7 +49,6 @@ For now the application is for C++ users only.
 	</li>
 	</ul>
 </li>
-<li><b>NOTE : xdg-open command is used. Make suitable replacements/installations (in zx.sh and start.sh).</b></li>
 </ul>
 
 <a name="installation"><h3>Installation</h3></a>
@@ -85,7 +84,6 @@ For now the application is for C++ users only.
 	<li>username:password@proxy:port</li>
 	</ul>
 </li>
-<li>If you want the problem-set to open in your default browser, uncomment the last two lines of <b>CF/dist/start.sh</b> </li>
 </ul>
 <center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/menu.jpg?raw=true"></center>
 <br>
@@ -108,4 +106,3 @@ Refer to <a href="http://bugecode.com/post.php?pid=118" target="_blank">this pos
 <br>
 <br>
 For Hugs and Bugs drop a mail at <b>asimkprasad@gmail.com</b>
-
