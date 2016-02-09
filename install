@@ -1,7 +1,11 @@
-echo "Checking the version of Sublime"
+if [ "$EUID" -ne 0 ]
+  then echo "Please run with root privileges"
+  exit
+fi
+echo "Checking the version of Sublime .. .."
 if [ -d ~/.config/sublime-text-3 ]
 then
-	echo "Changing permission of the commands ...."
+	echo "Changing permission of the commands .. .."
 	chmod -R 777 src_linux
 	if [ $? -ne 0 ]
 	then
@@ -9,7 +13,7 @@ then
 		exit
 	fi
 
-	echo "Copying CF to ~/.config/sublime-text-3/Packages/User/ ...."
+	echo "Copying CF to ~/.config/sublime-text-3/Packages/User/ .. .."
 	cp -r CF ~/.config/sublime-text-3/Packages/User/
 	if [ $? -ne 0 ]
 	then
@@ -17,7 +21,7 @@ then
 		exit
 	fi
 
-	echo "Copying Buggy---Linux to ~/.config/sublime-text-3/Packages/User/ ...."
+	echo "Copying Buggy---Linux to ~/.config/sublime-text-3/Packages/User/ .. .."
 	cp -r Buggy---Linux ~/.config/sublime-text-3/Packages/User/
 	if [ $? -ne 0 ]
 	then
@@ -25,7 +29,7 @@ then
 		exit
 	fi
 
-	echo "Changing permission of the directories ...."
+	echo "Changing permission of the directories .. .."
 	
 	chmod -R 777 ~/.config/sublime-text-3/Packages/User/CF
 	if [ $? -ne 0 ]
@@ -41,7 +45,7 @@ then
 		exit
 	fi
 
-	echo "Copying commands to /usr/bin ...."
+	echo "Copying commands to /usr/bin .. .."
 	cp src_linux/Buggy_* /usr/bin/
 	if [ $? -ne 0 ]
 	then
@@ -53,7 +57,7 @@ then
 
 elif [ -d ~/.config/sublime-text-2 ]
 then
-	echo "Changing permission of the commands ...."
+	echo "Changing permission of the commands .. .."
 	chmod -R 777 src_linux
 	if [ $? -ne 0 ]
 	then
@@ -61,7 +65,7 @@ then
 		exit
 	fi
 
-	echo "Copying CF to ~/.config/sublime-text-2/Packages/User/ ...."
+	echo "Copying CF to ~/.config/sublime-text-2/Packages/User/ .. .."
 	cp -r CF ~/.config/sublime-text-2/Packages/User/
 	if [ $? -ne 0 ]
 	then
@@ -69,7 +73,7 @@ then
 		exit
 	fi
 
-	echo "Copying Buggy---Linux to ~/.config/sublime-text-2/Packages/User/ ...."
+	echo "Copying Buggy---Linux to ~/.config/sublime-text-2/Packages/User/ .. .."
 	cp -r Buggy---Linux ~/.config/sublime-text-2/Packages/User/
 	if [ $? -ne 0 ]
 	then
@@ -77,7 +81,7 @@ then
 		exit
 	fi
 
-	echo "Changing permission of the directories ...."
+	echo "Changing permission of the directories .. .."
 	
 	chmod -R 777 ~/.config/sublime-text-2/Packages/User/CF
 	if [ $? -ne 0 ]
@@ -93,7 +97,7 @@ then
 		exit
 	fi
 
-	echo "Copying commands to /usr/bin ...."
+	echo "Copying commands to /usr/bin .. .."
 	cp src_linux/Buggy_* /usr/bin/
 	if [ $? -ne 0 ]
 	then
@@ -104,6 +108,6 @@ then
 	echo "Installation Successful"
 
 else
-	echo "No Sublime Text found on System at path /.config/sublime-text-x...."
-	echo "Aborting : Error"
+	echo "No Sublime Text found on System at path /.config/sublime-text-x .. .."
+	echo "Aborting : Error !!"
 fi
