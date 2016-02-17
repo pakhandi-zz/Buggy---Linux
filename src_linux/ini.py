@@ -1,10 +1,11 @@
 import os
 from bs4 import BeautifulSoup
+import sys
 import shutil
 import urllib2
 
 #print "Enter the round number : "
-CF = raw_input()
+CF = int(sys.argv[1])
 
 url = "http://codeforces.com/contest/"+CF+"/problems"
 
