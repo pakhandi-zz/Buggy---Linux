@@ -18,3 +18,4 @@
 
 
 *.so linguist-vendored=false
+*.sublime-* linguist-vendored=false
