@@ -18,4 +18,4 @@
 
 
 *.so linguist-vendored=false
-Buggy---Linux/* linguist-vendored=false
+Buggy---Linux/* linguist-documentation
