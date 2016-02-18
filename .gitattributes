@@ -18,4 +18,4 @@
 
 
 *.so linguist-vendored=false
-*.sublime-* linguist-vendored=false
+Buggy---Linux/* linguist-vendored=false
