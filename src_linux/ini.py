@@ -29,7 +29,7 @@ except Exception, e:
 	proxy_config = newDict["proxy_config"]
 
 	if len(proxy_config) != 0:
-		proxy = urllib2.ProxyHandler({'http'    : proxy_config})
+		proxy = urllib2.ProxyHandler({'http' : proxy_config})
 		opener = urllib2.build_opener(proxy)
 		urllib2.install_opener(opener)
 
