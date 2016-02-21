@@ -1,4 +1,4 @@
-<h1>Buggy : V.3.1</h1>
+<h1>Buggy : V.3.2</h1>
 
 <b>Download the stable version from <a href="pakhandi.github.io/Buggy---Linux/">here</a></b>
 
@@ -17,6 +17,7 @@ For now the application is for C++ users only.
 <li><a href="#requisites">Requisites</a></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#usage">Usage</a></li>
+<li><a href="#advusage">Advanced Usage (from terminal)</a></li>
 <li><a href="#techused">Technology Used</a></li>
 <li><a href="#testing">Testing</a></li>
 <li><a href="http://bugecode.com/post.php?pid=121" target="_blank">FAQ</a></li>
@@ -90,6 +91,17 @@ For now the application is for C++ users only.
 <center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/CF.JPG?raw=true"></center>
 <br><br>
 
+
+<a name="usage"><h3>Usage</h3></a>
+<ul>
+<li>After the installation you should notice you are able to use three commands from terminal
+	<ol>
+	<li>Buggy_BatchTest</li>
+	<li>Buggy_CustomTest</li>
+	<li>Buggy_Submit</li>
+	</ol>
+</li>
+</ul>
 
 <a name="techused"><h3>Technology Used</h3></a>
 <ul>
