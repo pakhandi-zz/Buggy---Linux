@@ -96,9 +96,9 @@ For now the application is for C++ users only.
 <ul>
 <li>After the installation you should notice you are able to use three commands from terminal
 	<ol>
-	<li>Buggy_BatchTest</li>
-	<li>Buggy_CustomTest</li>
-	<li>Buggy_Submit</li>
+	<li>Buggy_BatchTest : To start the batch testing for a particular solution</li>
+	<li>Buggy_CustomTest : To run program on custom testcases.</li>
+	<li>Buggy_Submit : To submit the solution.</li>
 	</ol>
 </li>
 </ul>
