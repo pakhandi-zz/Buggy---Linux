@@ -4,7 +4,6 @@ import sys
 import shutil
 import urllib2
 
-#print "Enter the round number : "
 CF = int(sys.argv[1])
 
 url = "http://codeforces.com/contest/"+CF+"/problems"
@@ -16,19 +15,16 @@ try:
 	soup = BeautifulSoup(data)
 except Exception, e:
 	print "Direct Connection Failed, trying Proxy"
-	proxy_file = open("proxy.txt", 'r')
-
+	
+	configFile = open('config', 'r')
 	newDict = {}
-	for line in proxy_file:
-		# print line
+	for line in configFile:
 		listedline = line.strip().split(':')
-
 		if len(listedline) > 1:
 			newDict[listedline[0]] = listedline[1]
+	proxyConfig = newDict["proxy_config"]
 
-	proxy_config = newDict["proxy_config"]
-
-	if len(proxy_config) != 0:
+	if len(proxyConfig) != 0:
 		proxy = urllib2.ProxyHandler({'http' : proxy_config})
 		opener = urllib2.build_opener(proxy)
 		urllib2.install_opener(opener)
@@ -38,8 +34,6 @@ except Exception, e:
 	soup = BeautifulSoup(data)
 finally:
 	print "Error in Connection to Internet"
-
-#soup = BeautifulSoup(data.text)
 
 present=1
 
@@ -67,11 +61,11 @@ for div in soup.findAll('div', 'problemindexholder'):
 	incounter = 1
 	for item in div.findAll('pre'):
 		if incounter%2 == 1:
-			att_path = os.path.join(detach_dir, "in"+str(incounter/2)+".txt")
+			att_path = os.path.join(detach_dir, "in"+str(incounter/2))
 			print att_path
 			f = open(att_path, 'wb')
 		else:
-			att_path = os.path.join(detach_dir, "out"+str((incounter/2)-1)+".txt")
+			att_path = os.path.join(detach_dir, "out"+str((incounter/2)-1))
 			print att_path
 			f = open(att_path, 'wb')
 		incounter+=1
@@ -79,5 +73,3 @@ for div in soup.findAll('div', 'problemindexholder'):
 		item = str(item).replace("</pre>", "")
 		item = str(item).replace("<br/>", "\n")
 		f.write(item)
-
-#shutil.copyfile("f.bat", "340/C/f.bat")
