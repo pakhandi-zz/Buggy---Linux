@@ -4,8 +4,8 @@ noColor='\033[0m'
 
 for (( i=0; i <= 100; i++ ))
 do
-	inFile=in$i.txt
-	outFile=out$i.txt
+	inFile=in$i
+	outFile=out$i
 
 	if [ -f $inFile ]; then
 		printf "Running Test-case $i : \n"
