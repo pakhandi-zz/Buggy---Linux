@@ -4,7 +4,7 @@ import sys
 import shutil
 import urllib2
 
-CF = int(sys.argv[1])
+CF = sys.argv[1]
 
 url = "http://codeforces.com/contest/"+CF+"/problems"
 
@@ -13,33 +13,35 @@ try:
 	response = urllib2.urlopen(url)
 	data = response.read()
 	soup = BeautifulSoup(data)
-except Exception, e:
+except Exception:
 	print "Direct Connection Failed, trying Proxy"
 	
 	configFile = open('config', 'r')
 	newDict = {}
 	for line in configFile:
-		listedline = line.strip().split(':')
+		listedline = line.strip().split(':',1)
 		if len(listedline) > 1:
 			newDict[listedline[0]] = listedline[1]
-	proxyConfig = newDict["proxy_config"]
+	proxyConfig = newDict["proxyConfig"]
+
+	proxyConfig = proxyConfig.lstrip(' ')
+	proxyConfig = proxyConfig.rstrip(' ')
 
 	if len(proxyConfig) != 0:
-		proxy = urllib2.ProxyHandler({'http' : proxy_config})
+		proxy = urllib2.ProxyHandler({'http' : proxyConfig })
 		opener = urllib2.build_opener(proxy)
 		urllib2.install_opener(opener)
 
 	response = urllib2.urlopen(url)
 	data = response.read()
 	soup = BeautifulSoup(data)
-finally:
+else:
 	print "Error in Connection to Internet"
 
 present=1
 
 for x in soup.findAll('li', 'current'):
 	present=0
-	print x.text
 
 if present == 0:
 	exit()
