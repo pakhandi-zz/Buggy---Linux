@@ -4,9 +4,9 @@ import sys
 import shutil
 import urllib2
 
-CF = sys.argv[1]
+CFRound = sys.argv[1]
 
-url = "http://codeforces.com/contest/"+CF+"/problems"
+url = "http://codeforces.com/contest/"+CFRound+"/problems"
 
 try:
 	print "Trying direct connection"
@@ -49,15 +49,15 @@ if present == 0:
 counter = 0
 for div in soup.findAll('div', 'problemindexholder'):
 	
-	if (os.path.exists(CF+"/"+chr(ord('A')+counter))):
+	if (os.path.exists(CFRound+"/"+chr(ord('A')+counter))):
 		print "Folder Exists"
 	else:
-		os.makedirs(CF+"/"+chr(ord('A')+counter))
+		os.makedirs(CFRound+"/"+chr(ord('A')+counter))
 
-	shutil.copyfile("temp.txt",CF+"/"+chr(ord('A')+counter)+"/round.txt")
-	shutil.copyfile("template.cpp", CF+"/"+chr(ord('A')+counter)+"/aprog.cpp" )
+	shutil.copyfile("temp.txt",CFRound+"/"+chr(ord('A')+counter)+"/round.txt")
+	shutil.copyfile("template.cpp", CFRound+"/"+chr(ord('A')+counter)+"/aprog.cpp" )
 	
-	detach_dir = CF+"/"+chr(ord('A')+counter)+"/"
+	detach_dir = CFRound+"/"+chr(ord('A')+counter)+"/"
 	att_path = os.path.join(detach_dir, chr(ord('A')+counter)+".cpp")
 	counter+=1
 	incounter = 1
