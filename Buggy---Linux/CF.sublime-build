@@ -13,19 +13,19 @@
                     "working_dir" : "$file_path"
                 },
                 {   
-                    "cmd": [ "Buggy_BatchTest '${file_base_name}'" ],
+                    "cmd": [ "BuggyBatchTest '${file_base_name}'" ],
                     "shell": true,
                     "name": "Run",
                     "working_dir" : "$file_path"
                 },
                 {
-                    "cmd": [ "Buggy_CustomTest '${file_base_name}'" ],
+                    "cmd": [ "BuggyCustomTest '${file_base_name}'" ],
                     "shell": true,
                     "name": "run_custom_test_case",
                     "working_dir" : "$file_path"
                 },
                 {
-                    "cmd": [ "Buggy_Submit<round.txt" ],
+                    "cmd": [ "BuggySubmit<round.txt" ],
                     "shell": true,
                     "name": "Submit",
                     "working_dir" : "$file_path"
