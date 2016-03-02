@@ -1,3 +1,4 @@
+#!/bin/bash
 red='\033[0;31m'
 lightGreen='\033[1;32m'
 noColor='\033[0m'
