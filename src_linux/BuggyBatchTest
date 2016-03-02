@@ -1,4 +1,5 @@
 #!/bin/bash
+
 red='\033[0;31m'
 lightGreen='\033[1;32m'
 noColor='\033[0m'
@@ -24,9 +25,19 @@ do
 		diff -w $outFile o >/dev/null;REPLY=$?
 		if [ ${REPLY} -eq 0 ]
 		then
-		        printf "Exact matching : ${lightGreen}PASS${noColor}\n"
+			if [ ! -z $2 ] 
+			then 
+				printf "Exact matching : ${lightGreen}PASS${noColor}\n"
+			else
+				printf "Exact matching : PASS\n"
+			fi
 		else
-		        printf "Exact matching : ${red}FAIL${noColor}\n"
+			if [ ! -z $2 ] 
+			then 
+				printf "Exact matching : ${red}FAIL${noColor}\n"
+			else
+				printf "Exact matching : FAIL\n"
+			fi
 		fi
 		printf "======================================\n"
 	fi
