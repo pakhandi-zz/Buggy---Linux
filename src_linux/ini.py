@@ -44,7 +44,7 @@ for x in soup.findAll('li', 'current'):
 	present=0
 
 if present == 0:
-	exit()
+	sys.exit()
 		
 counter = 0
 for div in soup.findAll('div', 'problemindexholder'):
