@@ -4,6 +4,38 @@ red='\033[0;31m'
 lightGreen='\033[1;32m'
 noColor='\033[0m'
 
+doColor=0
+executable=''
+
+while test $# -gt 0; do
+		case "$1" in
+			-h|--help)
+				echo "BuggyBatchTest [OPTION] [FILE] [OPTION]"
+				echo "Run FILE on in files and match the output with out files"
+				echo " "
+				echo "Example : BuggyBatchTest -f prog -c"
+				echo " "
+				echo "options:"
+				echo "-h, --help                show brief help"
+				echo "-f                        specify name of executable"
+				echo "-c                        set color on"
+				exit 0
+				;;
+			-f)
+				shift
+				executable=$1
+				shift
+				;;
+			-c)
+				doColor=1
+				shift
+				;;
+			*)
+				break
+				;;
+		esac
+done
+
 for (( i=0; i <= 100; i++ ))
 do
 	inFile=in$i
@@ -14,7 +46,7 @@ do
 		printf "Input : "
 		cat $inFile
 		printf "\n"
-		./$1 < $inFile > o
+		./$executable < $inFile > o
 		printf "Your Output : "
 		cat o
 		printf "\n"
@@ -25,14 +57,14 @@ do
 		diff -w $outFile o >/dev/null;REPLY=$?
 		if [ ${REPLY} -eq 0 ]
 		then
-			if [ ! -z $2 ] 
+			if [ $doColor -eq 1 ] 
 			then 
 				printf "Exact matching : ${lightGreen}PASS${noColor}\n"
 			else
 				printf "Exact matching : PASS\n"
 			fi
 		else
-			if [ ! -z $2 ] 
+			if [ $doColor -eq 1 ] 
 			then 
 				printf "Exact matching : ${red}FAIL${noColor}\n"
 			else
