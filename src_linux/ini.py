@@ -54,7 +54,7 @@ for div in soup.findAll('div', 'problemindexholder'):
 	else:
 		os.makedirs(CFRound+"/"+chr(ord('A')+counter))
 
-	shutil.copyfile("temp.txt",CFRound+"/"+chr(ord('A')+counter)+"/round.txt")
+	shutil.copyfile("temp.txt",CFRound+"/"+chr(ord('A')+counter)+"/round")
 	shutil.copyfile("template.cpp", CFRound+"/"+chr(ord('A')+counter)+"/aprog.cpp" )
 	
 	detach_dir = CFRound+"/"+chr(ord('A')+counter)+"/"
