@@ -80,9 +80,8 @@ For now the application is for C++ users only.
 <li>If you want you can change the key-bindings too.</li>
 <li>If you are working behind proxy
 	<ul>
-	<li>Open <b>Buggy -> Proxy</b></li>
-	<li>Delete all the contents of the file and add your proxy with the following format :</li>
-	<li>username:password@proxy:port</li>
+	<li>Open <b>Buggy -> Config</b></li>
+	<li>Enter your proxy information with format : proxyConfig: username:password@ip:port</li>
 	</ul>
 </li>
 </ul>
