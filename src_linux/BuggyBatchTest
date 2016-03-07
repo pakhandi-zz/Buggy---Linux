@@ -7,6 +7,14 @@ noColor='\033[0m'
 doColor=0
 executable=''
 
+inPrefix=''
+inSuffix=''
+inPath=''
+
+outPrefix=''
+outSuffix=''
+outPath=''
+
 while test $# -gt 0; do
 		case "$1" in
 			-h|--help)
@@ -20,6 +28,36 @@ while test $# -gt 0; do
 				echo "-f                        specify name of executable"
 				echo "-c                        set color on"
 				exit 0
+				;;
+			-inPrefix)
+				shift
+				inPrefix=$1
+				shift
+				;;
+			-inSuffix)
+				shift
+				inSuffix=$1
+				shift
+				;;
+			-inPath)
+				shift
+				inPath=$1
+				shift
+				;;
+			-outPrefix)
+				shift
+				outPrefix=$1
+				shift
+				;;
+			-outSuffix)
+				shift
+				outSuffix=$1
+				shift
+				;;
+			-outPath)
+				shift
+				outPath=$1
+				shift
 				;;
 			-f)
 				shift
