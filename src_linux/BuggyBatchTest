@@ -7,11 +7,11 @@ noColor='\033[0m'
 doColor=0
 executable=''
 
-inPrefix=''
+inPrefix='in'
 inSuffix=''
 inPath=''
 
-outPrefix=''
+outPrefix='out'
 outSuffix=''
 outPath=''
 
@@ -76,8 +76,8 @@ done
 
 for (( i=0; i <= 100; i++ ))
 do
-	inFile=in$i
-	outFile=out$i
+	inFile="$inPath$inPrefix$i$inSuffix"
+	outFile="$outPath$outPrefix$i$outSuffix"
 
 	if [ -f $inFile ]; then
 		printf "Running Test-case $i : \n"
