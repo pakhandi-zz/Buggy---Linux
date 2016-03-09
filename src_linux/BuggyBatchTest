@@ -15,6 +15,10 @@ outPrefix='out'
 outSuffix=''
 outPath=''
 
+showIn=0
+showOut=0
+showUserOut=0
+
 while test $# -gt 0; do
 		case "$1" in
 			-h|--help)
@@ -68,6 +72,18 @@ while test $# -gt 0; do
 				doColor=1
 				shift
 				;;
+			-showIn)
+				showIn=1
+				shift
+				;;
+			-showOut)
+				showOut=1
+				shift
+				;;
+			-showUserOut)
+				showUserOut=1
+				shift
+				;;
 			*)
 				break
 				;;
@@ -81,16 +97,29 @@ do
 
 	if [ -f $inFile ]; then
 		printf "Running Test-case $i : \n"
-		printf "Input : "
-		cat $inFile
-		printf "\n"
+		
+		if [ $showIn -eq 1 ]
+		then
+			printf "Input : "
+			cat $inFile
+			printf "\n"
+		fi
+
 		./$executable < $inFile > o
-		printf "Your Output : "
-		cat o
-		printf "\n"
-		printf "Correct Output : "
-		cat $outFile
-		printf "\n"
+
+		if [ $showUserOut -eq 1 ]
+		then
+			printf "Your Output : "
+			cat o
+			printf "\n"
+		fi
+
+		if [ $showOut -eq 1 ]
+		then
+			printf "Correct Output : "
+			cat $outFile
+			printf "\n"
+		fi
 
 		diff -w $outFile o >/dev/null;REPLY=$?
 		if [ ${REPLY} -eq 0 ]
