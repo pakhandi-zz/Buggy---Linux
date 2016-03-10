@@ -31,6 +31,12 @@ while test $# -gt 0; do
 				echo "-h, --help                show brief help"
 				echo "-f                        specify name of executable"
 				echo "-c                        set color on"
+				echo "-inPrefix                 Prefix for input files"
+				echo "-inSuffix                 Suffix for input files"
+				echo "-inPath                   Path for input files"
+				echo "-outPrefix                Prefix for output files"
+				echo "-outSuffix                Suffix for output files"
+				echo "-outPath                  Path for output files"
 				exit 0
 				;;
 			-inPrefix)
