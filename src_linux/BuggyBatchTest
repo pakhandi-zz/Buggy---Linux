@@ -96,6 +96,10 @@ while test $# -gt 0; do
 		esac
 done
 
+if [ ! -f $executable ]; then
+	echo "The executable doesn't exist !!"
+fi
+
 for (( i=0; i <= 100; i++ ))
 do
 	inFile="$inPath$inPrefix$i$inSuffix"
