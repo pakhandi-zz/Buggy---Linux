@@ -98,6 +98,7 @@ done
 
 if [ ! -f $executable ]; then
 	echo "The executable doesn't exist !!"
+	exit
 fi
 
 for (( i=0; i <= 100; i++ ))
