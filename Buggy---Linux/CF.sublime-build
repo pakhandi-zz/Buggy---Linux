@@ -13,7 +13,7 @@
                     "working_dir" : "$file_path"
                 },
                 {   
-                    "cmd": [ "BuggyBatchTest '${file_base_name}'" ],
+                    "cmd": [ "BuggyBatchTest -f '${file_base_name}' -showIn -showOut -showUserOut" ],
                     "shell": true,
                     "name": "Run",
                     "working_dir" : "$file_path"
