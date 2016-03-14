@@ -37,6 +37,7 @@ while test $# -gt 0; do
 				echo "-outPrefix                Prefix for output files"
 				echo "-outSuffix                Suffix for output files"
 				echo "-outPath                  Path for output files"
+				echo "-showIn                   Show Input"
 				exit 0
 				;;
 			-inPrefix)
