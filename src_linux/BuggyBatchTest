@@ -23,7 +23,7 @@ while test $# -gt 0; do
 		case "$1" in
 			-h|--help)
 				echo "BuggyBatchTest -f [FILE] [OPTION]"
-				echo "Run FILE on in files and match the output with out files"
+				echo "Run FILE on input files and match the output with output files"
 				echo " "
 				echo "Example : BuggyBatchTest -f prog -c"
 				echo " "
