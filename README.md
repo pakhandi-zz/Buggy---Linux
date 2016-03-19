@@ -1,4 +1,4 @@
-<h1>Buggy : V.3.2</h1>
+<h1>Buggy : V.4.0</h1>
 
 <b>Download the stable version from <a href="pakhandi.github.io/Buggy---Linux/">here</a></b>
 
@@ -102,6 +102,12 @@ For now the application is for C++ users only.
 </li>
 </ul>
 
+<a name="advusage"><h3>Advanced Usage (from terminal)</h3></a>
+<ul>
+<li>In Terminal use <b>BuggyBatchTest --help</b> to get details of usage from terminal.</li>
+<li>Terminal usage allows to run an executable on multiple input files and compare the output against multiple corresponding output files.</li>
+</ul>
+
 <a name="techused"><h3>Technology Used</h3></a>
 <ul>
 <li>The application is made using Python-2.7.9 and Shell scripting</li>
@@ -110,7 +116,7 @@ For now the application is for C++ users only.
 </ul>
 
 <a name="testing"><h3>Testing</h3></a>
-The program has been tested on Ubuntu14.04, 64-bit
+The program has been tested on Ubuntu-14.04, 64-bit
 
 <br>
 Refer to <a href="http://bugecode.com/post.php?pid=118" target="_blank">this post</a> for more detailed explanation of the working of the application.
