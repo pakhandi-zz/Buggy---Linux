@@ -90,18 +90,6 @@ For now the application is for C++ users only.
 <center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/CF.JPG?raw=true"></center>
 <br><br>
 
-
-<a name="usage"><h3>Usage</h3></a>
-<ul>
-<li>After the installation you should notice you are able to use three commands from terminal
-	<ol>
-	<li>BuggyBatchTest : To start the batch testing for a particular solution</li>
-	<li>BuggyCustomTest : To run program on custom testcases.</li>
-	<li>BuggySubmit : To submit the solution.</li>
-	</ol>
-</li>
-</ul>
-
 <a name="advusage"><h3>Advanced Usage (from terminal)</h3></a>
 <ul>
 <li>In Terminal use <b>BuggyBatchTest --help</b> to get details of usage from terminal.</li>
