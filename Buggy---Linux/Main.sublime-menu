@@ -48,8 +48,8 @@
             } ,
             {
                 "command": "open_file",
-                "args": {"file": "${packages}/User/CF/dist/proxy.txt"},
-                "caption": "Proxy"
+                "args": {"file": "${packages}/User/CF/dist/config"},
+                "caption": "Config"
             },             
         ]
     }

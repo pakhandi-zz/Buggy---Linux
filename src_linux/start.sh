@@ -1,7 +1,7 @@
 echo "Enter the round number : "
 read round
 echo $round > temp.txt
-./ini < temp.txt
+./ini $round
 if [ ! -d "$round" ]; then
   exit
 fi

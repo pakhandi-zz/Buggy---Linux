@@ -1,0 +1,3 @@
+{
+	proxyConfig: username:password@ip:port
+}

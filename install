@@ -46,7 +46,7 @@ then
 	fi
 
 	echo "Copying commands to /usr/bin .. .."
-	cp src_linux/Buggy_* /usr/bin/
+	cp src_linux/Buggy* /usr/bin/
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
@@ -98,7 +98,7 @@ then
 	fi
 
 	echo "Copying commands to /usr/bin .. .."
-	cp src_linux/Buggy_* /usr/bin/
+	cp src_linux/Buggy* /usr/bin/
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
