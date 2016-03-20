@@ -16,4 +16,10 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 
+<<<<<<< HEAD
 *.so linguist-vendored=false
+=======
+
+*.so linguist-vendored=false
+Buggy---Linux/* linguist-documentation
+>>>>>>> master
