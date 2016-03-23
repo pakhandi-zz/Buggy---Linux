@@ -10,6 +10,9 @@ url = "http://codeforces.com/contest/"+CFRound+"/problems"
 
 try:
 	print "Trying direct connection"
+	proxy = urllib2.ProxyHandler({})
+	opener = urllib2.build_opener(proxy)
+	urllib2.install_opener(opener)
 	response = urllib2.urlopen(url)
 	data = response.read()
 	soup = BeautifulSoup(data)
