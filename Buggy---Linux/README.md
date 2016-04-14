@@ -1,6 +1,6 @@
 <h1>Buggy : V.4.0</h1>
 
-<b>Download the stable version from <a href="pakhandi.github.io/Buggy---Linux/">here</a></b>
+<b>Download the stable version from <a href="http://pakhandi.github.io/Buggy---Linux/">here</a></b>
 
 A batch-testing sublime plug-in for CodeForces
 <br><br>
