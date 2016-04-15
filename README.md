@@ -75,7 +75,7 @@ For now the application is for C++ users only.
 <li>Make sure Sublime Side-Bar is visible (<b>View -> Side Bar -> Show Side Bar</b>).</li>
 <li>To start parsing the test-cases, <b>(Buggy -> Start)</b>.</li>
 <li>For parsing the test-cases, provide the round-number you see in the url of the contest.</li>
-<li>Compile the code before running it on test-cases (<b>Ctrl+B</b> or <b>Buggy -> Compile</b>)</li>
+<li>Compile the code before running it on test-cases (<b>Ctrl+1</b> or <b>Buggy -> Compile</b>)</li>
 <li>Copy the code before going to submit the code.</li>
 <li>If you want you can change the key-bindings too.</li>
 <li>If you are working behind proxy
