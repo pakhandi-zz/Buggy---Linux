@@ -2,14 +2,16 @@
 
 <b>Download the stable version from <a href="http://pakhandi.github.io/Buggy---Linux/">here</a></b>
 
-A batch-testing sublime plug-in for CodeForces
-<br><br>
+A sublime plug-in for CodeForces
+<br /><br />
 This application is to assist a competitive-programmer in a CodeForces round. This application downloads all the sample test cases for a problem and runs a user&#39;s solution program on all these test cases so that no time is wasted on manual checking of the solution.
-
+<br />
+The plugin now also comes with a terminal tool which can be used to test a solution on multiple input files. This terminal tool may prove useful to problem setters.
+<br />
 For now the application is for C++ users only.
 <br>
-<b>NOTE : </b>Please try the Plug-in once before using it in actual contest to avoid any last minute confusions.<br>
-<b>Make Sure you have read the <a href="#installation">Installation</a> and <a href="#usage">Usage</a> very very carefully.</b>
+<b>NOTE : </b>Please try the Plug-in once before using it in actual contest to avoid any last minute confusions.<br />
+<b>Make Sure you have read <a href="#installation">Installation</a> and <a href="#usage">Usage</a> very very carefully.</b>
 <br>
 
 <h3>Index</h3>
@@ -94,6 +96,9 @@ For now the application is for C++ users only.
 <ul>
 <li>In Terminal use <b>BuggyBatchTest --help</b> to get details of usage from terminal.</li>
 <li>Terminal usage allows to run an executable on multiple input files and compare the output against multiple corresponding output files.</li>
+<li>The input files should have format \<--inPrefix\><i>i</i>\<--inSuffix\>, where <i>i</i> is 0, 1, 2, ...</li>
+<li>Similarly the output files should have format \<--outPrefix\><i>i</i>\<--outSuffix\>, where <i>i</i> is 0, 1, 2, ...</li>
+<li>For example , all input files are of format : in<i>i</i>.txt and these files are in directory : inputFiles, then the command will be structured as : BuggyBatchtest --inPrefix in --inSuffix .txt --inPath inputFiles</li>
 </ul>
 
 <a name="techused"><h3>Technology Used</h3></a>
