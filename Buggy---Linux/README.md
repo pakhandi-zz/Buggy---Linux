@@ -56,7 +56,7 @@ For now the application is for C++ users only.
 
 <a name="installation"><h3>Installation</h3></a>
 <ol>
-<li>Download all the files from <a href="pakhandi.github.io/Buggy---Linux/">here</a>.</li>
+<li>Download all the files from <a href="http://pakhandi.github.io/Buggy---Linux/">here</a>.</li>
 <li>Run <b>sudo ./install</b> in the extracted directory.</li>
 <li>Open sublime. GoTo <b>"Tools -> Build System"</b> and select <b>CF</b></li>
 <li>If you see <b>Buggy</b> menu in the menu-bar, installation is complete</li>
