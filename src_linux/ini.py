@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import sys
 import shutil
 import urllib2
+import getProxy
 
 CFRound = sys.argv[1]
 
@@ -18,17 +19,10 @@ try:
 	soup = BeautifulSoup(data)
 except Exception:
 	print "Direct Connection Failed, trying Proxy"
-	
-	configFile = open('config', 'r')
-	newDict = {}
-	for line in configFile:
-		listedline = line.strip().split(':',1)
-		if len(listedline) > 1:
-			newDict[listedline[0]] = listedline[1]
-	proxyConfig = newDict["proxyConfig"]
 
-	proxyConfig = proxyConfig.lstrip(' ')
-	proxyConfig = proxyConfig.rstrip(' ')
+	proxyConfig = getProxy.get()
+
+	print proxyConfig
 
 	if len(proxyConfig) != 0:
 		proxy = urllib2.ProxyHandler({'http' : proxyConfig })
