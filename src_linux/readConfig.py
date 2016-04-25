@@ -1,5 +1,5 @@
 
-def get():
+def getProxy():
 	configFile = open('config', 'r')
 	newDict = {}
 	for line in configFile:

@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import sys
 import shutil
 import urllib2
-import getProxy
+import readConfig
 
 CFRound = sys.argv[1]
 
@@ -20,7 +20,7 @@ try:
 except Exception:
 	print "Direct Connection Failed, trying Proxy"
 
-	proxyConfig = getProxy.get()
+	proxyConfig = readConfig.getProxy()
 
 	print proxyConfig
 
