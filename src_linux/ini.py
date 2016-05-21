@@ -43,7 +43,7 @@ for x in soup.findAll('li', 'current'):
 if present == 0:
 	sys.exit()
 
-customPath = "~/Pakhandi/Lib/CodeForces/"
+customPath = os.path.expanduser("~/Pakhandi/Lib/CodeForces/")
 		
 counter = 0
 for div in soup.findAll('div', 'problemindexholder'):
@@ -51,7 +51,7 @@ for div in soup.findAll('div', 'problemindexholder'):
 	if (os.path.exists(customPath + CFRound + "/" + chr(ord('A') + counter))):
 		print "Folder Exists"
 	else:
-		os.makedirs(CFRound+"/"+chr(ord('A')+counter))
+		os.makedirs(customPath + CFRound + "/" + chr(ord('A') + counter))
 
 	shutil.copyfile("temp",customPath + CFRound + "/" + chr(ord('A') + counter) + "/round")
 	shutil.copyfile("template.cpp", customPath + CFRound + "/" + chr(ord('A') + counter) + "/aprog.cpp" )
