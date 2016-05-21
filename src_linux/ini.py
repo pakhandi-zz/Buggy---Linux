@@ -42,19 +42,21 @@ for x in soup.findAll('li', 'current'):
 
 if present == 0:
 	sys.exit()
+
+customPath = "~/Pakhandi/Lib/CodeForces/"
 		
 counter = 0
 for div in soup.findAll('div', 'problemindexholder'):
 	
-	if (os.path.exists(CFRound+"/"+chr(ord('A')+counter))):
+	if (os.path.exists(customPath + CFRound + "/" + chr(ord('A') + counter))):
 		print "Folder Exists"
 	else:
 		os.makedirs(CFRound+"/"+chr(ord('A')+counter))
 
-	shutil.copyfile("temp",CFRound+"/"+chr(ord('A')+counter)+"/round")
-	shutil.copyfile("template.cpp", CFRound+"/"+chr(ord('A')+counter)+"/aprog.cpp" )
+	shutil.copyfile("temp",customPath + CFRound + "/" + chr(ord('A') + counter) + "/round")
+	shutil.copyfile("template.cpp", customPath + CFRound + "/" + chr(ord('A') + counter) + "/aprog.cpp" )
 	
-	detach_dir = CFRound+"/"+chr(ord('A')+counter)+"/"
+	detach_dir = customPath + CFRound + "/" + chr(ord('A') + counter) + "/"
 	att_path = os.path.join(detach_dir, chr(ord('A')+counter)+".cpp")
 	counter+=1
 	incounter = 1
