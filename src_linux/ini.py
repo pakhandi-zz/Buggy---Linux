@@ -20,7 +20,7 @@ try:
 except Exception:
 	print "Direct Connection Failed, trying Proxy"
 
-	proxyConfig = readConfig.getProxy()
+	proxyConfig = readConfig.get("Proxy")
 
 	print proxyConfig
 
@@ -43,7 +43,7 @@ for x in soup.findAll('li', 'current'):
 if present == 0:
 	sys.exit()
 
-customPath = os.path.expanduser("~/Pakhandi/Lib/CodeForces/")
+customPath = os.path.expanduser(readConfig.get("Path"))
 		
 counter = 0
 for div in soup.findAll('div', 'problemindexholder'):
