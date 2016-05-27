@@ -74,3 +74,9 @@ for div in soup.findAll('div', 'problemindexholder'):
 		item = str(item).replace("</pre>", "")
 		item = str(item).replace("<br/>", "\n")
 		f.write(item)
+
+detach_dir = "."
+att_path = os.path.join(detach_dir, "temp")
+f = open(att_path, 'wb')
+f.write(customPath)
+f.close()
