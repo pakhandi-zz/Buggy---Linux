@@ -86,6 +86,12 @@ For now the application is for C++ users only.
 	<li>Enter your proxy information with format : proxyConfig: username:password@ip:port</li>
 	</ul>
 </li>
+<li>To change the default directory for download
+	<ul>
+	<li>Open <b>Buggy -> Config</b></li>
+	<li>Enter your default directory with format : path: ~/path/to/target/directory/</li>
+	</ul>
+</li>
 </ul>
 <center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/menu.jpg?raw=true"></center>
 <br>
@@ -98,7 +104,7 @@ For now the application is for C++ users only.
 <li>Terminal usage allows to run an executable on multiple input files and compare the output against multiple corresponding output files.</li>
 <li>The input files should have format <b>inPrefix</b><i>i</i><b>inSuffix</b>, where <i>i</i> is 0, 1, 2, ...</li>
 <li>Similarly the output files should have format <b>outPrefix</b><i>i</i><b>outSuffix</b>, where <i>i</i> is 0, 1, 2, ...</li>
-<li>For example , all input files are of format : in<i>i</i>.txt and these files are in directory : inputFiles, then the command will be structured as : <b>BuggyBatchtest --inPrefix in --inSuffix .txt --inPath inputFiles</b></li>
+<li>For example , all input files are of format : in<i>i</i>.txt and these files are in directory : inputFiles, and name of the executable is aprog, then the command will be structured as : <b>BuggyBatchtest --inPrefix in --inSuffix .txt --inPath inputFiles -f aprog</b></li>
 </ul>
 
 <a name="techused"><h3>Technology Used</h3></a>
