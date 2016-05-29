@@ -1,4 +1,4 @@
-<h1>Buggy : V.4.0</h1>
+<h1>Buggy : V.4.1</h1>
 
 <b>Download the stable version from <a href="http://pakhandi.github.io/Buggy---Linux/">here</a></b>
 
@@ -86,6 +86,12 @@ For now the application is for C++ users only.
 	<li>Enter your proxy information with format : proxyConfig: username:password@ip:port</li>
 	</ul>
 </li>
+<li>To change the default directory for download
+	<ul>
+	<li>Open <b>Buggy -> Config</b></li>
+	<li>Enter your default directory with format : path: ~/path/to/target/directory/</li>
+	</ul>
+</li>
 </ul>
 <center><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/menu.jpg?raw=true"></center>
 <br>
@@ -96,9 +102,9 @@ For now the application is for C++ users only.
 <ul>
 <li>In Terminal use <b>BuggyBatchTest --help</b> to get details of usage from terminal.</li>
 <li>Terminal usage allows to run an executable on multiple input files and compare the output against multiple corresponding output files.</li>
-<li>The input files should have format \<--inPrefix\><i>i</i>\<--inSuffix\>, where <i>i</i> is 0, 1, 2, ...</li>
-<li>Similarly the output files should have format \<--outPrefix\><i>i</i>\<--outSuffix\>, where <i>i</i> is 0, 1, 2, ...</li>
-<li>For example , all input files are of format : in<i>i</i>.txt and these files are in directory : inputFiles, then the command will be structured as : BuggyBatchtest --inPrefix in --inSuffix .txt --inPath inputFiles</li>
+<li>The input files should have format <b>inPrefix</b><i>i</i><b>inSuffix</b>, where <i>i</i> is 0, 1, 2, ...</li>
+<li>Similarly the output files should have format <b>outPrefix</b><i>i</i><b>outSuffix</b>, where <i>i</i> is 0, 1, 2, ...</li>
+<li>For example , all input files are of format : in<i>i</i>.txt and these files are in directory : inputFiles, and name of the executable is aprog, then the command will be structured as : <b>BuggyBatchtest --inPrefix in --inSuffix .txt --inPath inputFiles -f aprog</b></li>
 </ul>
 
 <a name="techused"><h3>Technology Used</h3></a>

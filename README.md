@@ -1,4 +1,4 @@
-<h1>Buggy : V.4.0</h1>
+<h1>Buggy : V.4.1</h1>
 
 <b>Download the stable version from <a href="http://pakhandi.github.io/Buggy---Linux/">here</a></b>
 
@@ -84,6 +84,12 @@ For now the application is for C++ users only.
 	<ul>
 	<li>Open <b>Buggy -> Config</b></li>
 	<li>Enter your proxy information with format : proxyConfig: username:password@ip:port</li>
+	</ul>
+</li>
+<li>To change the default directory for download
+	<ul>
+	<li>Open <b>Buggy -> Config</b></li>
+	<li>Enter your default directory with format : path: ~/path/to/target/directory/</li>
 	</ul>
 </li>
 </ul>

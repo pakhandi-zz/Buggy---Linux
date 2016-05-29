@@ -20,7 +20,7 @@ try:
 except Exception:
 	print "Direct Connection Failed, trying Proxy"
 
-	proxyConfig = readConfig.getProxy()
+	proxyConfig = readConfig.get("proxyConfig")
 
 	print proxyConfig
 
@@ -42,19 +42,21 @@ for x in soup.findAll('li', 'current'):
 
 if present == 0:
 	sys.exit()
+
+customPath = os.path.expanduser(readConfig.get("path"))
 		
 counter = 0
 for div in soup.findAll('div', 'problemindexholder'):
 	
-	if (os.path.exists(CFRound+"/"+chr(ord('A')+counter))):
+	if (os.path.exists(customPath + CFRound + "/" + chr(ord('A') + counter))):
 		print "Folder Exists"
 	else:
-		os.makedirs(CFRound+"/"+chr(ord('A')+counter))
+		os.makedirs(customPath + CFRound + "/" + chr(ord('A') + counter))
 
-	shutil.copyfile("temp.txt",CFRound+"/"+chr(ord('A')+counter)+"/round")
-	shutil.copyfile("template.cpp", CFRound+"/"+chr(ord('A')+counter)+"/aprog.cpp" )
+	shutil.copyfile("temp",customPath + CFRound + "/" + chr(ord('A') + counter) + "/round")
+	shutil.copyfile("template.cpp", customPath + CFRound + "/" + chr(ord('A') + counter) + "/aprog.cpp" )
 	
-	detach_dir = CFRound+"/"+chr(ord('A')+counter)+"/"
+	detach_dir = customPath + CFRound + "/" + chr(ord('A') + counter) + "/"
 	att_path = os.path.join(detach_dir, chr(ord('A')+counter)+".cpp")
 	counter+=1
 	incounter = 1
@@ -72,3 +74,9 @@ for div in soup.findAll('div', 'problemindexholder'):
 		item = str(item).replace("</pre>", "")
 		item = str(item).replace("<br/>", "\n")
 		f.write(item)
+
+detach_dir = "."
+att_path = os.path.join(detach_dir, "temp")
+f = open(att_path, 'wb')
+f.write(customPath)
+f.close()

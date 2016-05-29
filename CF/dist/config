@@ -1,3 +1,4 @@
 {
 	proxyConfig: username:password@ip:port
+	path: ~/
 }
