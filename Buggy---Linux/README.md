@@ -1,4 +1,4 @@
-<h1>Buggy : V.4.0</h1>
+<h1>Buggy : V.4.1</h1>
 
 <b>Download the stable version from <a href="http://pakhandi.github.io/Buggy---Linux/">here</a></b>
 
