@@ -23,8 +23,6 @@ except Exception:
 
 		proxyConfig = readConfig.get("proxyConfig")
 
-		print proxyConfig
-
 		if len(proxyConfig) != 0:
 			proxy = urllib2.ProxyHandler({'http' : proxyConfig })
 			opener = urllib2.build_opener(proxy)
