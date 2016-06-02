@@ -18,22 +18,21 @@ try:
 	data = response.read()
 	soup = BeautifulSoup(data)
 except Exception:
-	print "Direct Connection Failed, trying Proxy"
+	try:
+		print "Direct Connection Failed, trying Proxy"
 
-	proxyConfig = readConfig.get("proxyConfig")
+		proxyConfig = readConfig.get("proxyConfig")
 
-	print proxyConfig
+		if len(proxyConfig) != 0:
+			proxy = urllib2.ProxyHandler({'http' : proxyConfig })
+			opener = urllib2.build_opener(proxy)
+			urllib2.install_opener(opener)
 
-	if len(proxyConfig) != 0:
-		proxy = urllib2.ProxyHandler({'http' : proxyConfig })
-		opener = urllib2.build_opener(proxy)
-		urllib2.install_opener(opener)
-
-	response = urllib2.urlopen(url)
-	data = response.read()
-	soup = BeautifulSoup(data)
-else:
-	print "Error in Connection to Internet"
+		response = urllib2.urlopen(url)
+		data = response.read()
+		soup = BeautifulSoup(data)
+	except Exception:
+		print "Error in Connection to Internet"
 
 present=1
 
