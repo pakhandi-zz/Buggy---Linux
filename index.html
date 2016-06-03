@@ -14,27 +14,24 @@
       <h1 class="project-name">Buggy---linux</h1>
       <h2 class="project-tagline">Batch-testing for CodeForces : Linux version</h2>
       <a href="https://github.com/pakhandi/Buggy---Linux" class="btn">View on GitHub</a>
-      <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.4.0.zip" class="btn">Download .zip V.4.0</a>
-      <a href="https://github.com/pakhandi/Buggy---Linux/archive/V.4.0.tar.gz" class="btn">Download .tar.gz V.4.0</a>
+      <a href="https://github.com/pakhandi/Buggy---Linux/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/pakhandi/Buggy---Linux/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
       <h1>
-<a id="buggy--v40" class="anchor" href="#buggy--v40" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Buggy : V.4.0</h1>
+<a id="buggy--v41" class="anchor" href="#buggy--v41" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Buggy : V.4.1</h1>
 
 <p><b>Download the stable version from <a href="http://pakhandi.github.io/Buggy---Linux/">here</a></b></p>
 
 <p>A sublime plug-in for CodeForces
 <br><br>
 This application is to assist a competitive-programmer in a CodeForces round. This application downloads all the sample test cases for a problem and runs a user's solution program on all these test cases so that no time is wasted on manual checking of the solution.
-<br />
-<br />
+<br>
 The plugin now also comes with a terminal tool which can be used to test a solution on multiple input files. This terminal tool may prove useful to problem setters.
-<br />
-<br />
+<br>
 For now the application is for C++ users only.
-<br />
-<br />
+<br>
 <b>NOTE : </b>Please try the Plug-in once before using it in actual contest to avoid any last minute confusions.<br>
 <b>Make Sure you have read <a href="#installation">Installation</a> and <a href="#usage">Usage</a> very very carefully.</b>
 <br></p>
@@ -119,6 +116,13 @@ For now the application is for C++ users only.
     <li>Enter your proxy information with format : proxyConfig: username:password@ip:port</li>
     </ul>
 </li>
+<li>To change the default directory for download
+    <ul>
+    <li>Open <b>Buggy -&gt; Config</b>
+</li>
+    <li>Enter your default directory with format : path: ~/path/to/target/directory/</li>
+    </ul>
+</li>
 </ul>
 
 <p></p><img src="https://github.com/pakhandi/Buggy---Linux/blob/master/src_linux/menu.jpg?raw=true">
@@ -134,7 +138,8 @@ For now the application is for C++ users only.
 <li>Terminal usage allows to run an executable on multiple input files and compare the output against multiple corresponding output files.</li>
 <li>The input files should have format <b>inPrefix</b><i>i</i><b>inSuffix</b>, where <i>i</i> is 0, 1, 2, ...</li>
 <li>Similarly the output files should have format <b>outPrefix</b><i>i</i><b>outSuffix</b>, where <i>i</i> is 0, 1, 2, ...</li>
-<li>For example , all input files are of format : in<i>i</i>.txt and these files are in directory : inputFiles, and name of the executable is aprog, then the command will be structured as : <b>BuggyBatchtest --inPrefix in --inSuffix .txt --inPath inputFiles -f aprog</b></li>
+<li>For example , all input files are of format : in<i>i</i>.txt and these files are in directory : inputFiles, and name of the executable is aprog, then the command will be structured as : <b>BuggyBatchtest --inPrefix in --inSuffix .txt --inPath inputFiles -f aprog</b>
+</li>
 </ul>
 
 <p><a name="techused"><h3>
