@@ -6,6 +6,7 @@ noColor='\033[0m'
 
 doColor=0
 executable=''
+lang=''
 
 inPrefix='in'
 inSuffix=''
@@ -36,6 +37,7 @@ while test $# -gt 0; do
 				echo "--inPrefix                 Prefix for input files"
 				echo "--inSuffix                 Suffix for input files"
 				echo "--inPath                   Path for input files"
+				echo "-l                         Language"
 				echo "--outPrefix                Prefix for output files"
 				echo "--outSuffix                Suffix for output files"
 				echo "--outPath                  Path for output files"
@@ -83,6 +85,11 @@ while test $# -gt 0; do
 				doColor=1
 				shift
 				;;
+			-l)
+				shift
+				lang=$1
+				shift
+				;;
 			--showIn)
 				showIn=1
 				shift
@@ -101,8 +108,13 @@ while test $# -gt 0; do
 		esac
 done
 
-if [ ! -f $executable ]; then
+if [[ (! -f $executable) || (! "$executable") ]]; then
 	echo "The executable doesn't exist !!"
+	exit
+fi
+
+if [[ "$lang" != "java" && "$lang" != "cpp" ]]; then
+	echo "Wrong language code !!"
 	exit
 fi
 
@@ -121,7 +133,11 @@ do
 			printf "\n"
 		fi
 
-		./$executable < $inFile > o
+		if [ "$lang" = "cpp" ]; then
+			./$executable < $inFile > o
+		elif [ "$lang" = "java" ]; then
+			java $executable < $inFile > o
+		fi
 
 		if [ $showUserOut -eq 1 ]
 		then
