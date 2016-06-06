@@ -1,0 +1,40 @@
+{
+    "cmd": ["javac '${file}'"],
+
+    "selector": "source.java",
+    "shell": true,
+    
+    "variants": 
+            [
+                {
+                    "cmd": [ "sh ${packages}/User/CF/dist/ini.sh" ],
+                    "shell": true,
+                    "name": "parse_test_cases",
+                    "working_dir" : "$file_path"
+                },
+                {   
+                    "cmd": [ "BuggyBatchTest -f '${file_base_name}' --showIn --showOut --showUserOut -l java" ],
+                    "shell": true,
+                    "name": "Run",
+                    "working_dir" : "$file_path"
+                },
+                {
+                    "cmd": [ "BuggyCustomTest -f '${file_base_name}' -l java" ],
+                    "shell": true,
+                    "name": "run_custom_test_case",
+                    "working_dir" : "$file_path"
+                },
+                {
+                    "cmd": [ "BuggySubmit<round" ],
+                    "shell": true,
+                    "name": "Submit",
+                    "working_dir" : "$file_path"
+                },
+                {
+                    "cmd": ["javac '${file}'"],
+                    "shell": true,
+                    "name": "Compile",
+                    "working_dir": "$file_path"
+                }
+            ]
+}
