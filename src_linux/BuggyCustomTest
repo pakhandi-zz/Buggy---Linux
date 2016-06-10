@@ -18,7 +18,7 @@ while test $# -gt 0; do
 		esac
 done
 
-if [ ! -f $executable ]; then
+if [[ ( "$lang" != "java" && (! -f $executable) ) || (! "$executable") ]]; then
 	echo "The executable doesn't exist !!"
 	exit
 fi
