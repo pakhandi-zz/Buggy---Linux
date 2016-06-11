@@ -1,4 +1,4 @@
-<h1>Buggy : V.4.1</h1>
+<h1>Buggy : V.4.2</h1>
 
 <b>Download the stable version from <a href="http://pakhandi.github.io/Buggy---Linux/">here</a></b>
 
@@ -8,8 +8,6 @@ This application is to assist a competitive-programmer in a CodeForces round. Th
 <br />
 The plugin now also comes with a terminal tool which can be used to test a solution on multiple input files. This terminal tool may prove useful to problem setters.
 <br />
-For now the application is for C++ users only.
-<br>
 <b>NOTE : </b>Please try the Plug-in once before using it in actual contest to avoid any last minute confusions.<br />
 <b>Make Sure you have read <a href="#installation">Installation</a> and <a href="#usage">Usage</a> very very carefully.</b>
 <br>
@@ -58,7 +56,7 @@ For now the application is for C++ users only.
 <ol>
 <li>Download all the files from <a href="http://pakhandi.github.io/Buggy---Linux/">here</a>.</li>
 <li>Run <b>sudo ./install</b> in the extracted directory.</li>
-<li>Open sublime. GoTo <b>"Tools -> Build System"</b> and select <b>CF</b></li>
+<li>Open sublime. GoTo <b>"Tools -> Build System"</b> and select <b>Buggy-C++</b> or <b>Buggy-JAVA</b></li>
 <li>If you see <b>Buggy</b> menu in the menu-bar, installation is complete</li>
 <li>Change the template code by <b>Buggy -> Template</b> as it suits you. (Let the end-comment be there to show support <b>:)</b> ).</li>
 
