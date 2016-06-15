@@ -44,13 +44,18 @@
             {
                 "command": "open_file",
                 "args": {"file": "${packages}/User/CF/dist/template.cpp"},
-                "caption": "Template"
-            } ,
+                "caption": "Template-C++"
+            },
+            {
+                "command": "open_file",
+                "args": {"file": "${packages}/User/CF/dist/template.java"},
+                "caption": "Template-JAVA"
+            },
             {
                 "command": "open_file",
                 "args": {"file": "${packages}/User/CF/dist/config"},
                 "caption": "Config"
-            },             
+            },
         ]
     }
 ]
