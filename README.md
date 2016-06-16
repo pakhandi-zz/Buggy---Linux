@@ -102,7 +102,21 @@ The plugin now also comes with a terminal tool which can be used to test a solut
 <li>Terminal usage allows to run an executable on multiple input files and compare the output against multiple corresponding output files.</li>
 <li>The input files should have format <b>inPrefix</b><i>i</i><b>inSuffix</b>, where <i>i</i> is 0, 1, 2, ...</li>
 <li>Similarly the output files should have format <b>outPrefix</b><i>i</i><b>outSuffix</b>, where <i>i</i> is 0, 1, 2, ...</li>
-<li>For example , all input files are of format : in<i>i</i>.txt and these files are in directory : inputFiles, and name of the executable is aprog, then the command will be structured as : <b>BuggyBatchtest --inPrefix in --inSuffix .txt --inPath inputFiles -f aprog</b></li>
+<li>
+	For example, in the case where :
+	<ul>
+	<li>All input files are of format : in<i>i</i>.txt</li>
+	<li>Input files are in the directory inputFiles</li>
+	<li>Name of the executable is aprog</li>
+	<li>All the output files are of format : out<i>i</i>.txt</li>
+	<li>Output files are in the same directory from where the command is being run (in this case assumed to be the same directory as the executable)</li>
+	<li>Language used is C++</li>
+	<li>And we just want to see the verdict with colors</li>
+	</ul>
+	The command will be structured as :
+	<b>BuggyBatchTest --inPrefix in --inSuffix .txt --inPath inputFiles/ -f aprog --outPrefix out --outSuffix .txt -l cpp -c</b>
+</li>
+<li>For example , all input files are of format : in<i>i</i>.txt and these files are in directory : inputFiles, and name of the executable is aprog, then the command will be structured as : <b>BuggyBatchtest --inPrefix in --inSuffix .txt --inPath inputFiles -f aprog -l cpp</b></li>
 </ul>
 
 <a name="techused"><h3>Technology Used</h3></a>
