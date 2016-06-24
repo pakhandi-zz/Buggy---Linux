@@ -1,4 +1,4 @@
 {
-	proxyConfig: username:password@ip:port
-	path: ~/
+	"proxyConfig": "username:password@ip:port",
+	"path": "~/"
 }

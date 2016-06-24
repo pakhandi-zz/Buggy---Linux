@@ -13,13 +13,13 @@
                     "working_dir" : "$file_path"
                 },
                 {   
-                    "cmd": [ "BuggyBatchTest -f '${file_base_name}' --showIn --showOut --showUserOut" ],
+                    "cmd": [ "BuggyBatchTest -f '${file_base_name}' --showIn --showOut --showUserOut -l cpp" ],
                     "shell": true,
                     "name": "Run",
                     "working_dir" : "$file_path"
                 },
                 {
-                    "cmd": [ "BuggyCustomTest '${file_base_name}'" ],
+                    "cmd": [ "BuggyCustomTest -f '${file_base_name}' -l cpp" ],
                     "shell": true,
                     "name": "run_custom_test_case",
                     "working_dir" : "$file_path"

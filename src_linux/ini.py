@@ -54,6 +54,8 @@ for div in soup.findAll('div', 'problemindexholder'):
 
 	shutil.copyfile("temp",customPath + CFRound + "/" + chr(ord('A') + counter) + "/round")
 	shutil.copyfile("template.cpp", customPath + CFRound + "/" + chr(ord('A') + counter) + "/aprog.cpp" )
+	shutil.copyfile("template.java", customPath + CFRound + "/" + chr(ord('A') + counter) + "/aprog.java" )
+
 	
 	detach_dir = customPath + CFRound + "/" + chr(ord('A') + counter) + "/"
 	att_path = os.path.join(detach_dir, chr(ord('A')+counter)+".cpp")
