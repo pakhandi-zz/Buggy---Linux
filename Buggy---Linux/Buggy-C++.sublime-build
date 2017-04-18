@@ -1,5 +1,5 @@
 {
-    "cmd": ["g++ '${file}' -o '${file_path}/${file_base_name}'"],
+    "cmd": ["g++ -D BUGGY -g -std=c++11 '${file}' -o '${file_path}/${file_base_name}'"],
 
     "selector": "source.c++",
     "shell": true,
@@ -31,7 +31,7 @@
                     "working_dir" : "$file_path"
                 },
                 {
-                    "cmd": ["g++ '${file}' -o '${file_path}/${file_base_name}'"],
+                    "cmd": ["g++ -D BUGGY -g -std=c++11 '${file}' -o '${file_path}/${file_base_name}'"],
                     "shell": true,
                     "name": "Compile",
                     "working_dir": "$file_path"

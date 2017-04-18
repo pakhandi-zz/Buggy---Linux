@@ -1,0 +1,65 @@
+if [ "$EUID" -ne 0 ]
+  then echo "Please run with root privileges"
+  exit
+fi
+echo "Checking the version of Sublime .. .."
+if [ -d ~/.config/sublime-text-3 ]
+then
+	echo "Removing the commands .. .."
+	rm /usr/bin/BuggyBatchTest /usr/bin/BuggyCustomTest /usr/bin/BuggySubmit
+	if [ $? -ne 0 ]
+	then
+		echo "Aborting : Error"
+		exit
+	fi
+
+	echo "Removing CF from ~/.config/sublime-text-3/Packages/User/ .. .."
+	rm -r ~/.config/sublime-text-3/Packages/User/CF
+	if [ $? -ne 0 ]
+	then
+		echo "Aborting : Error"
+		exit
+	fi
+
+	echo "Removing Buggy---Linux from ~/.config/sublime-text-3/Packages/User/ .. .."
+	rm -r  ~/.config/sublime-text-3/Packages/User/Buggy---Linux
+	if [ $? -ne 0 ]
+	then
+		echo "Aborting : Error"
+		exit
+	fi
+
+	echo "Uninstalled Successfully"
+
+elif [ -d ~/.config/sublime-text-2 ]
+then
+	echo "Removing the commands .. .."
+	rm /usr/bin/BuggyBatchTest /usr/bin/BuggyCustomTest /usr/bin/BuggySubmit
+	if [ $? -ne 0 ]
+	then
+		echo "Aborting : Error"
+		exit
+	fi
+
+	echo "Removing CF from ~/.config/sublime-text-2/Packages/User/ .. .."
+	rm -r ~/.config/sublime-text-2/Packages/User/CF
+	if [ $? -ne 0 ]
+	then
+		echo "Aborting : Error"
+		exit
+	fi
+
+	echo "Removing Buggy---Linux from ~/.config/sublime-text-2/Packages/User/ .. .."
+	rm -r  ~/.config/sublime-text-2/Packages/User/Buggy---Linux
+	if [ $? -ne 0 ]
+	then
+		echo "Aborting : Error"
+		exit
+	fi
+
+	echo "Uninstalled Successfully"
+
+else
+	echo "No Sublime Text found on System at path /.config/sublime-text-x .. .."
+	echo "Aborting : Error !!"
+fi
