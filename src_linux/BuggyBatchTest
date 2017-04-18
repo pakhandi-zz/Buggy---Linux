@@ -134,7 +134,7 @@ do
 		fi
 
 		if [ "$lang" = "cpp" ]; then
-			./$executable < $inFile > o
+			timeout 5s ./$executable < $inFile > o
 		elif [ "$lang" = "java" ]; then
 			java $executable < $inFile > o
 		fi
