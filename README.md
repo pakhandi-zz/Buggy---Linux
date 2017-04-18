@@ -1,4 +1,4 @@
-<h1>Buggy : V.4.2</h1>
+<h1>Buggy : V.5.0 (Unstable)</h1>
 
 <b>Download the stable version from <a href="http://pakhandi.github.io/Buggy---Linux/">here</a></b>
 
@@ -20,6 +20,7 @@ The plugin now also comes with a terminal tool which can be used to test a solut
 <li><a href="#advusage">Advanced Usage (from terminal)</a></li>
 <li><a href="#techused">Technology Used</a></li>
 <li><a href="#testing">Testing</a></li>
+<li><a href="#uninstall">Un-installation</a></li>
 <li><a href="http://bugecode.com/post.php?pid=121" target="_blank">FAQ</a></li>
 </ol>
 
@@ -98,6 +99,14 @@ The plugin now also comes with a terminal tool which can be used to test a solut
 
 <a name="advusage"><h3>Advanced Usage (from terminal)</h3></a>
 <ul>
+<li>The c++ program is compiled with flag <b>-D BUGGY</b>. This enables users to use code-snippet like
+
+```cpp
+#ifdef BUGGY
+	// something
+#endif
+```
+
 <li>In Terminal use <b>BuggyBatchTest --help</b> to get details of usage from terminal.</li>
 <li>Terminal usage allows to run an executable on multiple input files and compare the output against multiple corresponding output files.</li>
 <li>The input files should have format <b>inPrefix</b><i>i</i><b>inSuffix</b>, where <i>i</i> is 0, 1, 2, ...</li>
@@ -128,6 +137,12 @@ The plugin now also comes with a terminal tool which can be used to test a solut
 
 <a name="testing"><h3>Testing</h3></a>
 The program has been tested on Ubuntu-14.04, 64-bit
+
+<a name="uninstall"><h3>Un-installation</h3></a>
+<ol>
+<li>Download all the files from <a href="http://pakhandi.github.io/Buggy---Linux/">here</a>.</li>
+<li>Run <b>sudo ./unInstall</b> in the extracted directory.</li>
+</ol>
 
 <br>
 Refer to <a href="http://bugecode.com/post.php?pid=118" target="_blank">this post</a> for more detailed explanation of the working of the application.
