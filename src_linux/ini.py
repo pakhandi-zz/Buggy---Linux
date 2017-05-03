@@ -61,13 +61,20 @@ for div in soup.findAll('div', 'problemindexholder'):
 	att_path = os.path.join(detach_dir, chr(ord('A')+counter)+".cpp")
 	counter+=1
 	incounter = 1
+
+	div = div.find('div', 'sample-tests')
+
 	for item in div.findAll('pre'):
 		if incounter%2 == 1:
-			att_path = os.path.join(detach_dir, "in"+str(incounter/2))
+			fileName = readConfig.get("inputFileFormat")
+			fileName = fileName.replace("$number$", str(incounter / 2))
+			att_path = os.path.join(detach_dir, fileName)
 			print att_path
 			f = open(att_path, 'wb')
 		else:
-			att_path = os.path.join(detach_dir, "out"+str((incounter/2)-1))
+			fileName = readConfig.get("outputFileFormat")
+			fileName = fileName.replace("$number$", str((incounter / 2) - 1))
+			att_path = os.path.join(detach_dir, fileName)
 			print att_path
 			f = open(att_path, 'wb')
 		incounter+=1
