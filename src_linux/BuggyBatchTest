@@ -8,12 +8,12 @@ doColor=0
 executable=''
 lang=''
 
-inPrefix='in'
-inSuffix=''
+inPrefix=''
+inSuffix='.in'
 inPath=''
 
-outPrefix='out'
-outSuffix=''
+outPrefix=''
+outSuffix='.out'
 outPath=''
 
 showIn=0
