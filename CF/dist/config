@@ -1,4 +1,6 @@
 {
 	"proxyConfig": "username:password@ip:port",
-	"path": "~/"
+	"path": "~/",
+	"inputFileFormat": "$number$.in",
+	"outputFileFormat": "$number$.out"
 }
