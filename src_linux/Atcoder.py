@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup
 import readConfig
 import sys
 
-def parseProblem(sessionElement, problemUrl, problemIndex):
+def parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex):
+	problemUrl = getProblemUrl(contestId, problemRelativeUrl)
 	problemPage = sessionElement.get(problemUrl)
 	problemPageText = BeautifulSoup(problemPage.text)
 
@@ -41,8 +42,8 @@ def parseContest(sessionElement, contestId):
 			problemTag = cols[0]
 			problemLinkTag = problemTag.findAll('a')
 			problemRelativeUrl = problemLinkTag[0]['href']
-			problemUrl = getProblemUrl(contestId, problemRelativeUrl)
-			parseProblem(sessionElement, problemUrl, num)
+			# problemUrl = getProblemUrl(contestId, problemRelativeUrl)
+			parseProblem(sessionElement, contestId, problemRelativeUrl, num)
 
 def getContestUrl(contestId):
 	return "https://" + contestId + ".contest.atcoder.jp/"
