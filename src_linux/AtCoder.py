@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-import readConfig
 import sys
 import os
+import readConfig
 import FileHelper
 
 def parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex):
@@ -10,7 +10,7 @@ def parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex):
 	problemPage = sessionElement.get(problemUrl)
 	problemPageText = BeautifulSoup(problemPage.text)
 
-	basePath = os.path.expanduser(readConfig.get("path"))
+	basePath = os.path.expanduser(readConfig.get("AtCoderPath"))
 	contestPath = os.path.join(basePath, contestId)
 
 	problemPath = os.path.join(contestPath, chr(ord('A') + problemIndex))
@@ -73,8 +73,8 @@ def getLoginUrl(contestId):
 
 def doParsing(contestId):
 	payload = {
-		'name': readConfig.get("username"),
-		'password': readConfig.get("password")
+		'name': readConfig.get("AtCoderUsername"),
+		'password': readConfig.get("AtCoderPassword")
 	}
 	
 	with requests.Session() as sessionElement:

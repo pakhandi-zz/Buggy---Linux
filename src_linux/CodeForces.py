@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
-import readConfig
 import sys
 import os
+import readConfig
 import FileHelper
 
 def parseContest(sessionElement, contestId):
