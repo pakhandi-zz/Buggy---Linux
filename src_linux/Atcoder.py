@@ -15,7 +15,9 @@ def parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex):
 	basePath = os.path.expanduser(readConfig.get("path"))
 	# contestPath = contestId
 	contestPath = os.path.join(basePath, contestId)
-	FileHelper.createDir(contestPath)
+
+	problemPath = os.path.join(contestPath, chr(ord('A') + problemIndex))
+	FileHelper.createDir(problemPath)
 
 	inputCaseNumber = 0
 	outputCaseNumber = 0
@@ -29,11 +31,19 @@ def parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex):
 					inputCase = div.pre.string
 					print "Case: ", inputCaseNumber
 					print inputCase
+					testFileName = readConfig.get("inputFileFormat")
+					testFileName = testFileName.replace("$testCaseNumber$", str(inputCaseNumber))
+					testFile = os.path.join(problemPath, testFileName)
+					FileHelper.doWrite(testFile, inputCase)
 					inputCaseNumber += 1
 				if ("Output" in headerString) and ( ("Sample" in headerString) or ("Example" in headerString) ):
 					outputCase = div.pre.string
 					print "Case: ", outputCaseNumber
 					print outputCase
+					testFileName = readConfig.get("outputFileFormat")
+					testFileName = testFileName.replace("$testCaseNumber$", str(outputCaseNumber))
+					testFile = os.path.join(problemPath, testFileName)
+					FileHelper.doWrite(testFile, outputCase)
 					outputCaseNumber += 1
 
 def parseContest(sessionElement, contestId):
@@ -44,13 +54,13 @@ def parseContest(sessionElement, contestId):
 	num = 0
 	for div in allProblemsPageText.findAll('tbody'):
 		for row in div.findAll('tr'):
-			num += 1
 			cols = row.findAll('td')
 			problemTag = cols[0]
 			problemLinkTag = problemTag.findAll('a')
 			problemRelativeUrl = problemLinkTag[0]['href']
 			# problemUrl = getProblemUrl(contestId, problemRelativeUrl)
 			parseProblem(sessionElement, contestId, problemRelativeUrl, num)
+			num += 1
 
 def getContestUrl(contestId):
 	return "https://" + contestId + ".contest.atcoder.jp/"
