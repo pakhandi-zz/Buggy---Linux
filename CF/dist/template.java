@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
 import java.io.InputStream;
 
 
-public class aprog
+public class sol
 {
 	public static void main(String[] args)
 	{

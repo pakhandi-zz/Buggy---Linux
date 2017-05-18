@@ -1,6 +1,8 @@
 {
-	"proxyConfig": "username:password@ip:port",
-	"path": "~/",
-	"inputFileFormat": "$number$.in",
-	"outputFileFormat": "$number$.out"
+	"AtCoderPath": "~/",
+	"CodeForcesPath": "~/",
+	"AtCoderUsername": "username",
+	"AtCoderPassword": "password",
+	"inputFileFormat": "$testCaseNumber$.in",
+	"outputFileFormat": "$testCaseNumber$.out"
 }
