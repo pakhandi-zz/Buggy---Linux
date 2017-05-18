@@ -1,3 +1,4 @@
+import sys
 import CodeForces
 import AtCoder
 
@@ -6,7 +7,7 @@ contestId = sys.argv[2]
 
 if contestJudge == "CodeForces":
 	CodeForces.doParsing(contestId)
-else if contestJudge == "AtCoder":
+elif contestJudge == "AtCoder":
 	AtCoder.doParsing(contestId)
 else:
 	print "Judge not recognized"
