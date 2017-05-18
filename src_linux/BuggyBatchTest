@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 red='\033[0;31m'
 lightGreen='\033[1;32m'
@@ -118,6 +118,8 @@ if [[ "$lang" != "java" && "$lang" != "cpp" ]]; then
 	exit
 fi
 
+summary=""
+
 for (( i=0; i <= 100; i++ ))
 do
 	inFile="$inPath$inPrefix$i$inSuffix"
@@ -141,7 +143,7 @@ do
 
 		if [ $showUserOut -eq 1 ]
 		then
-			printf "Your Output : "
+			printf "Your Output : \n"
 			cat o
 			printf "\n"
 		fi
@@ -153,23 +155,33 @@ do
 			printf "\n"
 		fi
 
+		summary+="Test-case "
+		summary+=$i
+		summary+=": "
+
 		diff -w $outFile o >/dev/null;REPLY=$?
 		if [ ${REPLY} -eq 0 ]
 		then
 			if [ $doColor -eq 1 ] 
 			then 
 				printf "Exact matching : ${lightGreen}PASS${noColor}\n"
+				summary+="${lightGreen}PASS${noColor}\n"
 			else
 				printf "Exact matching : PASS\n"
+				summary+="PASS\n"
 			fi
 		else
 			if [ $doColor -eq 1 ] 
 			then 
 				printf "Exact matching : ${red}FAIL${noColor}\n"
+				summary+="${lightGreen}FAIL${noColor}\n"
 			else
 				printf "Exact matching : FAIL\n"
+				summary+="FAIL\n"
 			fi
 		fi
 		printf "======================================\n"
 	fi
 done
+
+printf "$summary"
