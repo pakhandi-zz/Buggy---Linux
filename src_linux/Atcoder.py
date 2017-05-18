@@ -10,14 +10,14 @@ def parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex):
 	problemPage = sessionElement.get(problemUrl)
 	problemPageText = BeautifulSoup(problemPage.text)
 
-	print "#"*20, problemIndex, "$"*20
-
 	basePath = os.path.expanduser(readConfig.get("path"))
-	# contestPath = contestId
 	contestPath = os.path.join(basePath, contestId)
 
 	problemPath = os.path.join(contestPath, chr(ord('A') + problemIndex))
 	FileHelper.createDir(problemPath)
+
+	FileHelper.copyFile("template.cpp", os.path.join(problemPath, "sol.cpp"))
+	FileHelper.copyFile("template.java", os.path.join(problemPath, "sol.java"))
 
 	inputCaseNumber = 0
 	outputCaseNumber = 0
@@ -29,8 +29,6 @@ def parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex):
 				headerString = div.h3.string
 				if ("Input" in headerString) and ( ("Sample" in headerString) or ("Example" in headerString) ):
 					inputCase = div.pre.string
-					print "Case: ", inputCaseNumber
-					print inputCase
 					testFileName = readConfig.get("inputFileFormat")
 					testFileName = testFileName.replace("$testCaseNumber$", str(inputCaseNumber))
 					testFile = os.path.join(problemPath, testFileName)
@@ -38,8 +36,6 @@ def parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex):
 					inputCaseNumber += 1
 				if ("Output" in headerString) and ( ("Sample" in headerString) or ("Example" in headerString) ):
 					outputCase = div.pre.string
-					print "Case: ", outputCaseNumber
-					print outputCase
 					testFileName = readConfig.get("outputFileFormat")
 					testFileName = testFileName.replace("$testCaseNumber$", str(outputCaseNumber))
 					testFile = os.path.join(problemPath, testFileName)
