@@ -44,7 +44,6 @@ def parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex):
 
 def parseContest(sessionElement, contestId):
 	contestUrl = getAllProblemsUrl(contestId)
-	print contestUrl
 	allProblemsPage = sessionElement.get(contestUrl)
 	allProblemsPageText = BeautifulSoup(allProblemsPage.text)
 	problemIndex = 0
