@@ -51,16 +51,15 @@ def parseContest(sessionElement, contestId):
 	print contestUrl
 	allProblemsPage = sessionElement.get(contestUrl)
 	allProblemsPageText = BeautifulSoup(allProblemsPage.text)
-	num = 0
+	problemIndex = 0
 	for div in allProblemsPageText.findAll('tbody'):
 		for row in div.findAll('tr'):
 			cols = row.findAll('td')
 			problemTag = cols[0]
 			problemLinkTag = problemTag.findAll('a')
 			problemRelativeUrl = problemLinkTag[0]['href']
-			# problemUrl = getProblemUrl(contestId, problemRelativeUrl)
-			parseProblem(sessionElement, contestId, problemRelativeUrl, num)
-			num += 1
+			parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex)
+			problemIndex += 1
 
 def getContestUrl(contestId):
 	return "https://" + contestId + ".contest.atcoder.jp/"
