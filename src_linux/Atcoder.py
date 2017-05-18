@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import readConfig
 import sys
+import os
+import FileHelper
 
 def parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex):
 	problemUrl = getProblemUrl(contestId, problemRelativeUrl)
@@ -9,6 +11,11 @@ def parseProblem(sessionElement, contestId, problemRelativeUrl, problemIndex):
 	problemPageText = BeautifulSoup(problemPage.text)
 
 	print "#"*20, problemIndex, "$"*20
+
+	basePath = os.path.expanduser(readConfig.get("path"))
+	# contestPath = contestId
+	contestPath = os.path.join(basePath, contestId)
+	FileHelper.createDir(contestPath)
 
 	inputCaseNumber = 0
 	outputCaseNumber = 0
