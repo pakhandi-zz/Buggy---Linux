@@ -1,3 +1,4 @@
+#! /bin/bash
 echo "Enter the round number : "
 read round
 
@@ -10,6 +11,9 @@ do
     break         
 done <temp
 
+echo "Press any key to continue"
+read r
+
 if [ ! -d "$line$round" ]; then
   exit
 fi
@@ -17,9 +21,3 @@ fi
 chmod -R 777 $line$round
 subl $line$round
 subl $line$round/A/sol.cpp
-
-#Uncomment the comments below to open the problemset in your default browser
-#Make sure you have xdg-open installed on your system...
-
-#alias xdg-open="xdg-open 2>/dev/null"
-#xdg-open http://codeforces.com/contest/$round/problems

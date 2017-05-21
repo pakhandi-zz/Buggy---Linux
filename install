@@ -19,7 +19,7 @@ else
 fi
 
 echo "Changing permission of the commands .. .."
-chmod -R 777 src_linux
+chmod -R 777 src_linux/
 if [ $? -ne 0 ]
 then
 	echo "Aborting : Error"
@@ -51,7 +51,7 @@ then
 fi
 
 echo "Changing permission of the directories .. .."
-chmod -R 777 ~/.config/sublime-text-$sublimeVersion/Packages/User/Buggy
+chmod -R 777 ~/.config/sublime-text-$sublimeVersion/Packages/User/Buggy/
 if [ $? -ne 0 ]
 then
 	echo "Aborting : Error"
@@ -60,6 +60,14 @@ fi
 
 echo "Copying commands to /usr/bin .. .."
 cp src_linux/cmd/* /usr/bin/
+if [ $? -ne 0 ]
+then
+	echo "Aborting : Error"
+	exit
+fi
+
+echo "Copying README.md to ~/.config/sublime-text-$sublimeVersion/Packages/User/Buggy/conf/ .. .."
+cp README.md ~/.config/sublime-text-$sublimeVersion/Packages/User/Buggy/conf/
 if [ $? -ne 0 ]
 then
 	echo "Aborting : Error"
