@@ -1,3 +1,4 @@
+#! /bin/bash
 echo "Enter the round number : "
 read round
 
@@ -10,7 +11,8 @@ do
     break         
 done <temp
 
-read -n 1 -s -p "Press any key to continue"
+echo "Press any key to continue"
+read r
 
 if [ ! -d "$line$round" ]; then
   exit
