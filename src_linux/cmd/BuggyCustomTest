@@ -1,0 +1,33 @@
+#!/bin/bash
+
+lang=''
+executable='aprog'
+
+while test $# -gt 0; do
+		case "$1" in
+			-f)
+				shift
+				executable=$1
+				shift
+				;;
+			-l)
+				shift
+				lang=$1
+				shift
+				;;
+		esac
+done
+
+if [[ ( "$lang" != "java" && (! -f $executable) ) || (! "$executable") ]]; then
+	echo "The executable doesn't exist !!"
+	exit
+fi
+
+if [ "$lang" = "cpp" ]; then
+	gnome-terminal -x sh -c "./$executable; bash"
+elif [ "$lang" = "java" ]; then
+	gnome-terminal -x sh -c "java $executable; bash"
+else
+	echo "Wrong language code";
+fi
+	

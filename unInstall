@@ -6,7 +6,7 @@ echo "Checking the version of Sublime .. .."
 if [ -d ~/.config/sublime-text-3 ]
 then
 	echo "Removing the commands .. .."
-	rm /usr/bin/BuggyBatchTest /usr/bin/BuggyCustomTest /usr/bin/BuggySubmit
+	rm -f /usr/bin/BuggyBatchTest /usr/bin/BuggyCustomTest /usr/bin/BuggySubmit
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
@@ -14,7 +14,7 @@ then
 	fi
 
 	echo "Removing CF from ~/.config/sublime-text-3/Packages/User/ .. .."
-	rm -r ~/.config/sublime-text-3/Packages/User/CF
+	rm -rf ~/.config/sublime-text-3/Packages/User/CF
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
@@ -22,7 +22,15 @@ then
 	fi
 
 	echo "Removing Buggy---Linux from ~/.config/sublime-text-3/Packages/User/ .. .."
-	rm -r  ~/.config/sublime-text-3/Packages/User/Buggy---Linux
+	rm -rf  ~/.config/sublime-text-3/Packages/User/Buggy---Linux
+	if [ $? -ne 0 ]
+	then
+		echo "Aborting : Error"
+		exit
+	fi
+
+	echo "Removing Buggy from ~/.config/sublime-text-3/Packages/User/ .. .."
+	rm -rf  ~/.config/sublime-text-3/Packages/User/Buggy
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
@@ -34,7 +42,7 @@ then
 elif [ -d ~/.config/sublime-text-2 ]
 then
 	echo "Removing the commands .. .."
-	rm /usr/bin/BuggyBatchTest /usr/bin/BuggyCustomTest /usr/bin/BuggySubmit
+	rm -f /usr/bin/BuggyBatchTest /usr/bin/BuggyCustomTest /usr/bin/BuggySubmit
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
@@ -42,7 +50,7 @@ then
 	fi
 
 	echo "Removing CF from ~/.config/sublime-text-2/Packages/User/ .. .."
-	rm -r ~/.config/sublime-text-2/Packages/User/CF
+	rm -rf ~/.config/sublime-text-2/Packages/User/CF
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
@@ -50,7 +58,15 @@ then
 	fi
 
 	echo "Removing Buggy---Linux from ~/.config/sublime-text-2/Packages/User/ .. .."
-	rm -r  ~/.config/sublime-text-2/Packages/User/Buggy---Linux
+	rm -rf  ~/.config/sublime-text-2/Packages/User/Buggy---Linux
+	if [ $? -ne 0 ]
+	then
+		echo "Aborting : Error"
+		exit
+	fi
+
+	echo "Removing Buggy from ~/.config/sublime-text-2/Packages/User/ .. .."
+	rm -rf  ~/.config/sublime-text-2/Packages/User/Buggy
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"

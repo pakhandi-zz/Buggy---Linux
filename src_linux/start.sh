@@ -1,13 +1,22 @@
 echo "Enter the round number : "
 read round
+
 echo $round > temp
-./ini $round
-if [ ! -d "$round" ]; then
+./ini $1 $round
+
+while read line           
+do            
+    echo $line
+    break         
+done <temp
+
+if [ ! -d "$line$round" ]; then
   exit
 fi
-chmod -R 777 $round
-subl ./$round
-subl $round/A/aprog.cpp
+
+chmod -R 777 $line$round
+subl $line$round
+subl $line$round/A/sol.cpp
 
 #Uncomment the comments below to open the problemset in your default browser
 #Make sure you have xdg-open installed on your system...

@@ -1,0 +1,6 @@
+[
+	{ "keys": ["ctrl+shift+I"], "command": "build", "args": {"variant": "parseCodeForces"} },
+	{ "keys": ["ctrl+1"], "command": "build", "args": {"variant": "compile"} },
+	{ "keys": ["ctrl+shift+1"], "command": "build", "args": {"variant": "runBatchTest"} },
+	{ "keys": ["ctrl+alt+1"], "command": "build", "args": {"variant": "runCustomTest"} }
+]

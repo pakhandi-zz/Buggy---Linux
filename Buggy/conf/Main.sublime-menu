@@ -1,0 +1,67 @@
+[
+    {
+        "caption": "Buggy",
+        "mnemonic": "B",
+        "id": "buggy",
+        "children":
+        [
+            {
+                "caption": "Start",
+                "children":
+                [
+                    {
+                        "command": "build",
+                        "args": {"variant": "parseCodeForces"},
+                        "caption": "CodeForces"
+                    },
+                    {
+                        "command": "build",
+                        "args": {"variant": "parseAtCoder"},
+                        "caption": "AtCoder"
+                    }
+                ]
+            },
+            {
+                "command": "build",
+                "args": {"variant": "compile"},
+                "caption": "Compile"
+            },
+            {
+                "command": "build",
+                "args": {"variant": "runBatchTest"},
+                "caption": "Batch Test"
+            },
+            {
+                "command": "build",
+                "args": {"variant": "runCustomTest"},
+                "caption": "Custom Test"
+            },
+            { "caption": "-" },
+            {
+                "command": "open_file",
+                "args": {"file": "${packages}/User/Buggy/conf/README.md"},
+                "caption": "README"
+            },
+            {
+                "command": "open_file",
+                "args": {"file": "${packages}/User/Buggy/conf/Default (Linux).sublime-keymap"},
+                "caption": "Key Bindings - Default"
+            },
+            {
+                "command": "open_file",
+                "args": {"file": "${packages}/User/Buggy/bin/dist/template.cpp"},
+                "caption": "Template-C++"
+            },
+            {
+                "command": "open_file",
+                "args": {"file": "${packages}/User/Buggy/bin/dist/template.java"},
+                "caption": "Template-JAVA"
+            },
+            {
+                "command": "open_file",
+                "args": {"file": "${packages}/User/Buggy/bin/dist/config"},
+                "caption": "Config"
+            },
+        ]
+    }
+]
