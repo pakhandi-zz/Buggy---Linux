@@ -1,8 +1,0 @@
-{
-	"AtCoderPath": "~/",
-	"CodeForcesPath": "~/",
-	"AtCoderUsername": "username",
-	"AtCoderPassword": "password",
-	"inputFileFormat": "$testCaseNumber$.in",
-	"outputFileFormat": "$testCaseNumber$.out"
-}
