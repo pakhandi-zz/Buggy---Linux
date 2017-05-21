@@ -1,99 +1,69 @@
+#! /bin/bash
 if [ "$EUID" -ne 0 ]
   then echo "Please run with root privileges"
   exit
 fi
 echo "Checking the version of Sublime .. .."
+sublimeVersion=0
 if [ -d ~/.config/sublime-text-3 ]
 then
-	echo "Changing permission of the commands .. .."
-	chmod -R 777 src_linux
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-
-	echo "Copying Buggy to ~/.config/sublime-text-3/Packages/User/ .. .."
-	cp -r Buggy ~/.config/sublime-text-3/Packages/User/
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-
-	echo "Copying unInstall to ~/.config/sublime-text-3/Packages/User/Buggy/ .. .."
-	cp unInstall ~/.config/sublime-text-3/Packages/User/Buggy/
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-
-	echo "Changing permission of the directories .. .."
-	
-	chmod -R 777 ~/.config/sublime-text-3/Packages/User/Buggy
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-
-	echo "Copying commands to /usr/bin .. .."
-	cp src_linux/Buggy* /usr/bin/
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-
-	echo "Installation Successful"
+	sublimeVersion=3
 
 elif [ -d ~/.config/sublime-text-2 ]
 then
-	echo "Changing permission of the commands .. .."
-	chmod -R 777 src_linux
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-
-	echo "Copying Buggy to ~/.config/sublime-text-2/Packages/User/ .. .."
-	cp -r Buggy ~/.config/sublime-text-2/Packages/User/
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-
-	echo "Copying unInstall to ~/.config/sublime-text-2/Packages/User/Buggy/ .. .."
-	cp unInstall ~/.config/sublime-text-2/Packages/User/Buggy/
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-
-	echo "Changing permission of the directories .. .."
-	
-	chmod -R 777 ~/.config/sublime-text-2/Packages/User/Buggy
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-
-	echo "Copying commands to /usr/bin .. .."
-	cp src_linux/Buggy* /usr/bin/
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-
-	echo "Installation Successful"
+	sublimeVersion=2
 
 else
 	echo "No Sublime Text found on System at path /.config/sublime-text-x .. .."
 	echo "Aborting : Error !!"
 fi
+
+echo "Changing permission of the commands .. .."
+chmod -R 777 src_linux
+if [ $? -ne 0 ]
+then
+	echo "Aborting : Error"
+	exit
+fi
+
+echo "Copying Buggy to ~/.config/sublime-text-$sublimeVersion/Packages/User/ .. .."
+cp -r Buggy ~/.config/sublime-text-$sublimeVersion/Packages/User/
+if [ $? -ne 0 ]
+then
+	echo "Aborting : Error"
+	exit
+fi
+
+echo "Copying unInstall to ~/.config/sublime-text-$sublimeVersion/Packages/User/Buggy/ .. .."
+cp unInstall ~/.config/sublime-text-$sublimeVersion/Packages/User/Buggy/
+if [ $? -ne 0 ]
+then
+	echo "Aborting : Error"
+	exit
+fi
+
+echo "Copying src_linux/{ini.sh,start.sh,config,template.cpp,template.java} to ~/.config/sublime-text-$sublimeVersion/Packages/User/Buggy/bin/dist/ .. .."
+cp src_linux/{ini.sh,start.sh,config,template.cpp,template.java} ~/.config/sublime-text-$sublimeVersion/Packages/User/Buggy/bin/dist/
+if [ $? -ne 0 ]
+then
+	echo "Aborting : Error"
+	exit
+fi
+
+echo "Changing permission of the directories .. .."
+chmod -R 777 ~/.config/sublime-text-$sublimeVersion/Packages/User/Buggy
+if [ $? -ne 0 ]
+then
+	echo "Aborting : Error"
+	exit
+fi
+
+echo "Copying commands to /usr/bin .. .."
+cp src_linux/Buggy* /usr/bin/
+if [ $? -ne 0 ]
+then
+	echo "Aborting : Error"
+	exit
+fi
+
+echo "Installation Successful"
