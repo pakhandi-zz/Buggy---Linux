@@ -80,6 +80,7 @@ def doParsing(contestId):
 	with requests.Session() as sessionElement:
 		retVal = sessionElement.post(getLoginUrl(contestId), data=payload)
 		parseContest(sessionElement, contestId)
+		FileHelper.doWrite("temp", os.path.expanduser(readConfig.get("AtCoderPath")))
 
 # call it
 contestId = sys.argv[1]

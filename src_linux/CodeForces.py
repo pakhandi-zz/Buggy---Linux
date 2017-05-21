@@ -55,6 +55,8 @@ def doParsing(contestId):
 	
 	with requests.Session() as sessionElement:
 		parseContest(sessionElement, contestId)
+		FileHelper.doWrite("temp", os.path.expanduser(readConfig.get("CodeForcesPath")))
+
 
 # call it
 contestId = sys.argv[1]
