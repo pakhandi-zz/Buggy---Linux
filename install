@@ -13,16 +13,16 @@ then
 		exit
 	fi
 
-	echo "Copying CF to ~/.config/sublime-text-3/Packages/User/ .. .."
-	cp -r CF ~/.config/sublime-text-3/Packages/User/
+	echo "Copying Buggy to ~/.config/sublime-text-3/Packages/User/ .. .."
+	cp -r Buggy ~/.config/sublime-text-3/Packages/User/
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
 		exit
 	fi
 
-	echo "Copying Buggy---Linux to ~/.config/sublime-text-3/Packages/User/ .. .."
-	cp -r Buggy---Linux ~/.config/sublime-text-3/Packages/User/
+	echo "Copying unInstall to ~/.config/sublime-text-3/Packages/User/Buggy/ .. .."
+	cp unInstall ~/.config/sublime-text-3/Packages/User/Buggy/
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
@@ -31,14 +31,7 @@ then
 
 	echo "Changing permission of the directories .. .."
 	
-	chmod -R 777 ~/.config/sublime-text-3/Packages/User/CF
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-	
-	chmod -R 777 ~/.config/sublime-text-3/Packages/User/Buggy---Linux
+	chmod -R 777 ~/.config/sublime-text-3/Packages/User/Buggy
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
@@ -65,16 +58,16 @@ then
 		exit
 	fi
 
-	echo "Copying CF to ~/.config/sublime-text-2/Packages/User/ .. .."
-	cp -r CF ~/.config/sublime-text-2/Packages/User/
+	echo "Copying Buggy to ~/.config/sublime-text-2/Packages/User/ .. .."
+	cp -r Buggy ~/.config/sublime-text-2/Packages/User/
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
 		exit
 	fi
 
-	echo "Copying Buggy---Linux to ~/.config/sublime-text-2/Packages/User/ .. .."
-	cp -r Buggy---Linux ~/.config/sublime-text-2/Packages/User/
+	echo "Copying unInstall to ~/.config/sublime-text-2/Packages/User/Buggy/ .. .."
+	cp unInstall ~/.config/sublime-text-2/Packages/User/Buggy/
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
@@ -83,14 +76,7 @@ then
 
 	echo "Changing permission of the directories .. .."
 	
-	chmod -R 777 ~/.config/sublime-text-2/Packages/User/CF
-	if [ $? -ne 0 ]
-	then
-		echo "Aborting : Error"
-		exit
-	fi
-	
-	chmod -R 777 ~/.config/sublime-text-2/Packages/User/Buggy---Linux
+	chmod -R 777 ~/.config/sublime-text-2/Packages/User/Buggy
 	if [ $? -ne 0 ]
 	then
 		echo "Aborting : Error"
