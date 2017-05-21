@@ -6,29 +6,35 @@
         "children":
         [
             {
-                "command": "build",
-                "args": {"variant": "parse_test_cases"},
-                "caption": "Start"
+                "caption": "Start",
+                "children":
+                [
+                    {
+                        "command": "build",
+                        "args": {"variant": "parseCodeForces"},
+                        "caption": "CodeForces"
+                    },
+                    {
+                        "command": "build",
+                        "args": {"variant": "parseAtCoder"},
+                        "caption": "AtCoder"
+                    }
+                ]
             },
             {
                 "command": "build",
-                "args": {"variant": "Compile"},
+                "args": {"variant": "compile"},
                 "caption": "Compile"
             },
             {
                 "command": "build",
-                "args": {"variant": "Run"},
+                "args": {"variant": "runBatchTest"},
                 "caption": "Batch Test"
             },
             {
                 "command": "build",
-                "args": {"variant": "run_custom_test_case"},
+                "args": {"variant": "runCustomTest"},
                 "caption": "Custom Test"
-            },
-            {
-                "command": "build",
-                "args": {"variant": "Submit"},
-                "caption": "Submit Solution"
             },
             { "caption": "-" },
             {
