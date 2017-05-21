@@ -1,7 +1,6 @@
 [
-	{ "keys": ["ctrl+shift+I"], "command": "build", "args": {"variant": "parse_test_cases"} },
-	{ "keys": ["ctrl+1"], "command": "build", "args": {"variant": "Compile"} },
-	{ "keys": ["ctrl+shift+1"], "command": "build", "args": {"variant": "Run"} },
-	{ "keys": ["ctrl+alt+1"], "command": "build", "args": {"variant": "run_custom_test_case"} },
-	{ "keys": ["ctrl+alt+S"], "command": "build", "args": {"variant": "Submit"} }
+	{ "keys": ["ctrl+shift+I"], "command": "build", "args": {"variant": "parseCodeForces"} },
+	{ "keys": ["ctrl+1"], "command": "build", "args": {"variant": "compile"} },
+	{ "keys": ["ctrl+shift+1"], "command": "build", "args": {"variant": "runBatchTest"} },
+	{ "keys": ["ctrl+alt+1"], "command": "build", "args": {"variant": "runCustomTest"} }
 ]
