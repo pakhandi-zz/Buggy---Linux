@@ -59,7 +59,7 @@ then
 fi
 
 echo "Copying commands to /usr/bin .. .."
-cp src_linux/Buggy* /usr/bin/
+cp src_linux/cmd/* /usr/bin/
 if [ $? -ne 0 ]
 then
 	echo "Aborting : Error"
