@@ -39,27 +39,27 @@
             { "caption": "-" },
             {
                 "command": "open_file",
-                "args": {"file": "${packages}/User/Buggy---Linux/README.md"},
+                "args": {"file": "${packages}/User/Buggy/conf/README.md"},
                 "caption": "README"
             },
             {
                 "command": "open_file",
-                "args": {"file": "${packages}/User/Buggy---Linux/Default (Linux).sublime-keymap"},
+                "args": {"file": "${packages}/User/Buggy/conf/Default (Linux).sublime-keymap"},
                 "caption": "Key Bindings - Default"
             },
             {
                 "command": "open_file",
-                "args": {"file": "${packages}/User/CF/dist/template.cpp"},
+                "args": {"file": "${packages}/User/Buggy/bin/dist/template.cpp"},
                 "caption": "Template-C++"
             },
             {
                 "command": "open_file",
-                "args": {"file": "${packages}/User/CF/dist/template.java"},
+                "args": {"file": "${packages}/User/Buggy/bin/dist/template.java"},
                 "caption": "Template-JAVA"
             },
             {
                 "command": "open_file",
-                "args": {"file": "${packages}/User/CF/dist/config"},
+                "args": {"file": "${packages}/User/Buggy/bin/dist/config"},
                 "caption": "Config"
             },
         ]

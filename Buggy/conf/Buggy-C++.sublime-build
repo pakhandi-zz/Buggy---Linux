@@ -7,13 +7,13 @@
     "variants": 
             [
                 {
-                    "cmd": [ "sh ${packages}/User/CF/dist/ini.sh CodeForces" ],
+                    "cmd": [ "sh ${packages}/User/Buggy/bin/dist/ini.sh CodeForces" ],
                     "shell": true,
                     "name": "parseCodeForces",
                     "working_dir" : "$file_path"
                 },
                 {
-                    "cmd": [ "sh ${packages}/User/CF/dist/ini.sh AtCoder" ],
+                    "cmd": [ "sh ${packages}/User/Buggy/bin/dist/ini.sh AtCoder" ],
                     "shell": true,
                     "name": "parseAtCoder",
                     "working_dir" : "$file_path"
